@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.158);
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 12px;
+}
+
+.unihogar12 {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 1.9fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header {  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu social search cart"
+    "banner banner banner banner";
+  grid-area: header;
+}
+
+.banner { grid-area: banner; }
+
+.menu { grid-area: menu; }
+
+.social {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "fb ig mp";
+  grid-area: social;
+}
+
+.fb { grid-area: fb; }
+
+.ig { grid-area: ig; }
+
+.mp { grid-area: mp; }
+
+.search {  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ic searchform";
+  grid-area: search;
+}
+
+.ic { grid-area: ic; }
+
+.searchform { grid-area: searchform; }
+
+.cart { grid-area: cart; }
+
+.main {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr 1.5fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "carrusel"
+    "catalogo"
+    "masvendidos"
+    "ofermes"
+    "flash";
+  grid-area: main;
+}
+
+.carrusel { grid-area: carrusel; }
+
+.catalogo {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "h1 h2 h3 h4 h5 h6 h7";
+  grid-area: catalogo;
+}
+
+.h1 { grid-area: h1; }
+
+.h2 { grid-area: h2; }
+
+.h3 { grid-area: h3; }
+
+.h4 { grid-area: h4; }
+
+.h5 { grid-area: h5; }
+
+.h6 { grid-area: h6; }
+
+.h7 { grid-area: h7; }
+
+.masvendidos {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titulo1 titulo1 titulo1"
+    "producto1 producto2 producto3";
+  grid-area: masvendidos;
+}
+
+.titulo1 { grid-area: titulo1; }
+
+.producto1 { grid-area: producto1; }
+
+.producto2 { grid-area: producto2; }
+
+.producto3 { grid-area: producto3; }
+
+.ofermes {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titulo2 titulo2 titulo2"
+    "producto4 producto5 producto6";
+  grid-area: ofermes;
+}
+
+.titulo2 { grid-area: titulo2; }
+
+.producto4 { grid-area: producto4; }
+
+.producto5 { grid-area: producto5; }
+
+.producto6 { grid-area: producto6; }
+
+.flash {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titulo3 titulo3 titulo3"
+    "producto7 producto8 producto9";
+  grid-area: flash;
+}
+
+.titulo3 { grid-area: titulo3; }
+
+.producto7 { grid-area: producto7; }
+
+.producto8 { grid-area: producto8; }
+
+.producto9 { grid-area: producto9; }
+
+.footer {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "prefooter prefooter prefooter"
+    "gps aboutus tutorial"
+    "googlemaps textaboutus videosyt";
+  grid-area: footer;
+}
+
+.prefooter { grid-area: prefooter; }
+
+.gps { grid-area: gps; }
+
+.aboutus { grid-area: aboutus; }
+
+.tutorial { grid-area: tutorial; }
+
+.googlemaps { grid-area: googlemaps; }
+
+.textaboutus { grid-area: textaboutus; }
+
+.videosyt { grid-area: videosyt; }
