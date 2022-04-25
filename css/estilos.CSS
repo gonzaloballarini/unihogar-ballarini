@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color: rgba(0, 0, 0, 0.158);
+   background-color: rgba(243, 105, 105, 0.164);
     color: white;
     border: 2px solid white;
     text-align: center;
@@ -28,11 +28,24 @@
     "menu social search cart"
     "banner banner banner banner";
   grid-area: header;
+  height: 350px;
+  background-color: black;
 }
 
-.banner { grid-area: banner; }
+.banner { 
+  height: 280px;
+  grid-area: banner; 
+  background-image: url(../bannerempresawide.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
 
-.menu { grid-area: menu; }
+}
+
+.menu { grid-area: menu;
+    height: 65px;
+}
 
 .social {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -42,29 +55,64 @@
   grid-template-areas:
     "fb ig mp";
   grid-area: social;
+  height: 65px;
+  background-color: black;
 }
 
-.fb { grid-area: fb; }
+.fb { grid-area: fb; 
+  background-image: url(../images/logofacebookcolor.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
 
-.ig { grid-area: ig; }
+.ig { grid-area: ig; 
+  background-image: url(../images/logoinstacolor.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-.mp { grid-area: mp; }
+.mp { grid-area: mp; 
+  background-image: url(../images/logomapscolor.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-.search {  display: grid;
+.search {  /*display: grid;
   grid-template-columns: 0.5fr 1.5fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "ic searchform";
-  grid-area: search;
+  grid-area: search;*/
+  height: 65px;
+  background-color: black;
+
+
 }
 
-.ic { grid-area: ic; }
+.ic { grid-area: ic;
+ 
 
-.searchform { grid-area: searchform; }
+  
+}
 
-.cart { grid-area: cart; }
+/*.searchform { grid-area: searchform;}*/
+
+.cart { 
+  grid-area: cart;
+  height: 65px;
+  background-image: url(../images/carronegreo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+
+}
 
 .main {  display: grid;
   grid-template-columns: 1fr;
@@ -80,7 +128,11 @@
   grid-area: main;
 }
 
-.carrusel { grid-area: carrusel; }
+.carrusel { 
+  grid-area: carrusel;
+  background-color: black;
+}
+
 
 .catalogo {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -175,7 +227,9 @@
   grid-area: footer;
 }
 
-.prefooter { grid-area: prefooter; }
+.prefooter { /*grid-area: prefooter*/
+  display: none;
+}
 
 .gps { grid-area: gps; }
 
@@ -188,3 +242,209 @@
 .textaboutus { grid-area: textaboutus; }
 
 .videosyt { grid-area: videosyt; }
+
+
+/****** VERSION MOBILE *******/
+@media  only screen and (max-width:576px) {
+ 
+  .header { display: grid;
+    grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "banner banner banner banner"
+      "menu menu search cart";
+    grid-area: header;
+    height: 270px;
+  }
+  
+  .banner { 
+    height: 150px;  
+  }
+  
+  .menu { grid-area: menu;
+      height: 53px;
+  }
+
+  .navbar-brand{
+    display: none;
+  }
+  
+  .social {  display:none;}
+    
+  .search { display: grid;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "ic";
+    grid-area: search;
+    height: 53px
+  
+  }
+ 
+  .searchform {display: none;}
+  
+  .cart { 
+    height: 53px 
+  }
+  
+  .main {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1.5fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "carrusel"
+      /*"catalogo"*/
+      "masvendidos"
+      "ofermes"
+      "flash";
+    grid-area: main;
+    height: 600px;
+
+
+  }
+  
+  .carrusel { 
+    grid-area: carrusel;
+    background-color: black;
+    height: 300px;
+  
+  }
+  
+  
+  .catalogo {  display: none; }
+  
+  .masvendidos {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo1 titulo1 titulo1"
+      /*"producto1 producto2 producto3"*/;
+    grid-area: masvendidos;
+    height: 100px;
+  }
+  
+  .titulo1 { grid-area: titulo1;
+  height: 100px; 
+    background-image: url(../images/fondodeofertas.jpg);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    font-size: 40px;
+    text-decoration: double;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 25px;
+
+}
+  
+  .producto1 { display: none; }
+  
+  .producto2 { display: none; }
+  
+  .producto3 { display: none; }
+  
+  .ofermes {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo2 titulo2 titulo2"
+      /*"producto4 producto5 producto6"*/;
+    grid-area: ofermes;
+    height: 100px;
+  }
+  
+  .titulo2 { grid-area: titulo2;
+    height: 100px;
+    background-image: url(../images/fondodeofertas.jpg);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    font-size: 40px;
+    text-decoration: double;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 25px;
+  }
+  
+  .producto4 { display: none; }
+  
+  .producto5 { display: none; }
+  
+  .producto6 { display: none; }
+  
+  .flash {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titulo3 titulo3 titulo3"
+      /*"producto7 producto8 producto9"*/;
+    grid-area: flash;
+    height: 100px;
+
+  }
+  
+  .titulo3 { grid-area: titulo3;
+    height: 100px;
+    background-image: url(../images/fondodeofertas.jpg);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    font-size: 40px;
+    text-decoration: double;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 25px;
+    
+  }
+  
+  .producto7 { display: none; }
+  
+  .producto8 { display: none; }
+  
+  .producto9 { display: none; }
+  
+  .footer {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr /*0.5fr 2fr*/;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "prefooter prefooter prefooter"
+      /*"gps aboutus tutorial"
+      "googlemaps textaboutus videosyt"*/;
+    grid-area: footer;
+    height: 50px;
+  }
+  
+  .prefooter { grid-area: prefooter; 
+  background-color: black;
+  height: 50px;
+}
+  
+  .gps { display: none; }
+  
+  .aboutus { display: none; }
+  
+  .tutorial { display: none; }
+  
+  .googlemaps { display: none; }
+  
+  .textaboutus {display: none; }
+  
+  .videosyt { display: none; }
+  
+  
+
+  
+}
