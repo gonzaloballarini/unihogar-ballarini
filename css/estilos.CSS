@@ -581,6 +581,69 @@ background-size: contain;
 }
 
 
+/*ESTILOS DE LA SECCIÓN PRODUCTOS*/
+
+.container {  display: grid;
+  grid-template-columns: /*0.1fr*/ 1.5fr 1.5fr 1.5fr 1.5fr /*0.1fr*/;
+  grid-template-rows: /*0.1fr*/ 0.5fr 0.2fr 1fr 0.2fr 0.5fr 0.2fr 1fr;
+  gap: 0px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    " . . . . . ."
+    " . pd pb pc pcd ."
+    " . tp1 tp2 tp3 tp4 ."
+    " . cp1 cp2 cp3 cp4 ."
+    " . . . . . ."
+    " . pl plv pjye . . "
+    " . tp5 tp6 tp7 . ."
+    " . cp5 cp6 cp7 . .";
+    border: solid black 2px;
+}
+
+.pd { grid-area: pd; }
+
+.pb { grid-area: pb; }
+
+.pc { grid-area: pc; }
+
+.pcd { grid-area: pcd; }
+
+.tp3 { grid-area: tp3; }
+
+.tp2 { grid-area: tp2; }
+
+.tp1 { grid-area: tp1; }
+
+.tp4 { grid-area: tp4; }
+
+.cp1 { grid-area: cp1; }
+
+.cp2 { grid-area: cp2; }
+
+.cp3 { grid-area: cp3; }
+
+.cp4 { grid-area: cp4; }
+
+.pl { grid-area: pl; }
+
+.plv { grid-area: plv; }
+
+.pjye { grid-area: pjye; }
+
+.tp5 { grid-area: tp5; }
+
+.tp6 { grid-area: tp6; }
+
+.tp7 { grid-area: tp7; }
+
+.cp5 { grid-area: cp5; }
+
+.cp6 { grid-area: cp6; }
+
+.cp7 { grid-area: cp7; }
+
+
+
 /****** VERSION MOBILE *******/
 @media  only screen and (max-width:576px) {
  
@@ -786,7 +849,5 @@ background-size: contain;
   
   .videosyt { display: none; }
   
-  
-
-  
+ 
 }
