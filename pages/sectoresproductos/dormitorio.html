@@ -5,85 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unihogar - Dormitorio</title>
-    <link rel="shortcut icon" href="../images/Icono Empresa.png">
+    <link rel="shortcut icon" href="../../images/logoempresa.jpeg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/estilos.css">
 </head>
 <body>
     <HEADER>
         <!--Barra de Navegación superior del header--> 
-        <nav>
-            <!--Menu desplegable--> 
-            <div class="menu">
-                <nav class="menu_inicio">
-                    <ul>
-                        <li><a href="../../index.html">Menu Inicial</a>
-                            <ul>
-                                <li><a href="../Productos.html">Productos</a></li>
-                                <li><a href="../ofertas.html">Ofertas</a></li>
-                                <li><a href="../tutoriales.html">Tutoriales</a></li>
-                                <li><a href="../acercadenosotros.html">Nosotros</a></li>
-                                <li><a href="../contacto.html">Contactanos</a></li>
-                            </ul>
-                        </li>
+        <!--<div class="unihogar12">-->
+            <div class="header">
+              <div class="banner"></div>
+              <div class="menu">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                  <!-- Brand -->
+                  <a class="navbar-brand" href="../../index.html">Menu</a>
+                
+                  <!-- Toggler/collapsibe Button -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                
+                  <!-- Navbar links -->
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="../productos.html">Productos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../ofertas.html">Ofertas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../tutoriales.html">Tutoriales</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../acercadenosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../contacto.html">Contactanos</a>
+                      </li>
                     </ul>
-                </nav>
+                  </div>
+                </nav> 
+              </div>
+        
+              <div class="social">
+                <div class="fb">
+                  <a href="https://www.facebook.com/uniplast.hogar.5"></a>
+                </div>
+                <div class="ig">
+                  <a href="https://www.instagram.com/uniplasthogar/?hl=es"></a>
+                </div>
+                <div class="mp">
+                  <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"></a>
+                </div>
+              </div>
+              <div class="search">
+                <div class="ic">
+                  <button data-toggle="collapse" data-target="#demo"><img src="../../images/lupanegra.jpg" alt="lupanegra" width="100%"
+                      height="57px"></button>
+              
+                  <div id="demo" class="collapse">
+                    <form action="get.php">
+                      <label for="busqueda"></label>
+                      <input type="text" name="Busqueda" id="busqueda" placeholder="Encuentra el producto que estas buscando...">
+                    </form>
+                  </div>
+                  <!--<div class="searchform"></div>-->
+                </div>
+              </div>
+              <div class="cart"></div>
             </div>
-            <!--Recuadro de Busqueda-->       
-            <div class="search">
-                <img src="../../IMAGES/lupanegra.jpg" alt="Lupa" width="40px" height="40px">
-                <form action="get.php">
-                    <label for="busqueda"></label>
-                    <input type="text" name="Busqueda" id="busqueda" placeholder="Encuentra el producto que estas buscando...">
-                </form>
-            </div>
-
-            <!--Recuadro para Redes Sociales y Contactos-->      
-            <div class="social">
-                <a href="https://www.facebook.com/uniplast.hogar.5">
-                    <img src="../../IMAGES/logofacebookcolor.jpg" alt="Facebook Logo" width="40px" height="40px">
-                </a>
-                <a href="https://www.instagram.com/uniplasthogar/?hl=es">
-                    <img src="../../images/logoinstacolor.jpg" alt="Instagram Logo" width="40px" height="40px">
-                </a>
-                <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8">
-                    <img src="../../IMAGES/logomapscolor.png" alt="Google Maps Logo"   width="40px" height="40px">
-                </a>
-            </div>
         
         
-        
-             <!--Recuadro del Carrito de Compras--> 
-            <div class="shopcart">
-                <img src="../../images/carronegreo.png" alt="carrito" width="50px" height="50px">
-            </div>
-        </nav>
-        
-        
-        <!--Logo de la Empresa-->
-        <section class="banner">
-            <a href="https://wa.me/5492613367007">
-               <img src="../../images/logowassap.png" alt="boton whatsapp" width="40px" height="40px" class="wassap">
-            </a>
-         </section>
-         </HEADER>
+        </HEADER>
         <main class="dormitoriomain"></main>
     <h1>Dormitorio</h1>
     <a href="../Productos.html#dormitorio"><em>Volver al Catalogo de Productos</em></a><br>
     <a href="../../index.html"><strong>Volver a Inicio</strong></a>
-    <footer>
-        <div><h3>Conoce nuestro local</h3>
-            <iframe src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.0845846717357!2d-68.80050227196796!3d-32.90842677351797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1648515761389!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+    <div class="footer">
+        <div class="prefooter">
+           <div class="fb">
+              <a href="https://www.facebook.com/uniplast.hogar.5"><img src="./images/logofacebookcolor.jpg" alt="facebook"></a>
+            </div>
+            <div class="ig">
+              <a href="https://www.instagram.com/uniplasthogar/?hl=es"><img src="./images/logoinstacolor.jpg" alt="instagram"></a>
+            </div>
+            <div class="mp">
+              <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"><img src="./images/logomapscolor.png" alt="googlemaps"></a>
+            </div>
         </div>
-        <div class="aboutus"> 
-            <h3>Acerca de la empresa</h3><a href="../acercadenosotros.html"><img src="../../images/iconoempresa.png" alt="icono empresa" width="35px" height="35px" style="display:inline-flexbox;"></a><br>
-            <p><strong>Unihogar es una empresa familiar fundada en el año 2019. Si bien la misma data de un tiempo mas o menos corto, se trata de una familia que se encuentra en el rubro del blanco y la decoración desde hace mas de 40 años.  <br><br>Algunas de las empresas que fueron creadas en la Provincia de Mendoza, fueron por ejemplo: Atelier, Los 5 Distribuidores, Telar, Telar Blanco y Deco, Uniplast, y ahora quien lleva la bandera y logo familiar es la nueva firma "Unihogar". <br> <br> Porque entendemos que la familia es nuestro pequeño universo, ese universo que elegimos para pasar nuestra vida y que es nuestro compromiso hacerlo mas cómodo y confortable para vivir en armonía.</strong> <br> <br> </p>
-        
+        <div class="gps"> Acercate a nuestro local </div>
+        <div class="aboutus"> Conoce nuestra empresa</div>
+        <div class="tutorial"> Te ayudamos a elegir</div>
+        <div class="googlemaps"> 
+          <iframe src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.0845846717357!2d-68.80050227196796!3d-32.90842677351797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1648515761389!5m2!1ses-419!2sar" style="border:0; width: 90%; height: 90%; position:relative; top:5%; left: 6%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div><h3>Videos de Interés</h3><br>
-            <iframe src="https://www.youtube.com/embed/3wzxnQDgOzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="textaboutus"> 
+          <p><strong>Unihogar es una empresa familiar fundada en el año 2019. Si bien la misma data de un tiempo mas o menos corto, se trata de una familia que se encuentra en el rubro del blanco y la decoración desde hace mas de 40 años.  <br><br>Algunas de las empresas que fueron creadas en la Provincia de Mendoza, fueron por ejemplo: Atelier, Los 5 Distribuidores, Telar, Telar Blanco y Deco, Uniplast, y ahora quien lleva la bandera y logo familiar es la nueva firma "Unihogar". <br> <br> Porque entendemos que la familia es nuestro pequeño universo, ese universo que elegimos para pasar nuestra vida y que es nuestro compromiso hacerlo mas cómodo y confortable para vivir en armonía.</strong></p>
         </div>
-    </footer>
-    <a href="#" class="subir"><img src="../../images/arrow-up-solid.svg" alt="flechasubir" width="30px" height="30px"></a>
-    
+        <div class="videosyt">
+          <iframe src="https://www.youtube.com/embed/3wzxnQDgOzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 90%; height: 90%; position:relative; top: 5%; left: 6%;"></iframe>
+        </div>
+      </div>
+    </div>
+  
+  <a href="#" class="subir"><img src="../images/arrow-up-solid.svg" alt="flechasubir" width="30px" height="30px"></a>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  
 </body>
 </html>
