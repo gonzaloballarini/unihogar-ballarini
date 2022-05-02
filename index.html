@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unihogar12</title>
-    <!--Este link esta sacado de la pagina de bootstrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/estilos.CSS">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unihogar12</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/estilos.CSS">
 </head>
+
 <body>
+
+  <!-- Encabezado general para todas las secciones (banner, navbar, busqueda, redes sociales, carrito d compras)-->
   <div class="unihogar12">
     <div class="header">
       <div class="banner"></div>
       <div class="menu">
+        <!--Menu dropdown extraido de bootstrap-->
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
           <!-- Brand -->
           <a class="navbar-brand" href="#">Menu</a>
-        
+
           <!-- Toggler/collapsibe Button -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-        
+
           <!-- Navbar links -->
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
@@ -43,10 +48,10 @@
               </li>
             </ul>
           </div>
-        </nav> 
+        </nav>
       </div>
 
-
+      <!--Botones de Redes Sociales-->
       <div class="social">
         <div class="fb">
           <a href="https://www.facebook.com/uniplast.hogar.5"></a>
@@ -59,23 +64,32 @@
         </div>
       </div>
 
+      <!-- Recuadro de busqueda extraido de bootstrap-->
       <div class="search">
         <div class="ic">
-          <button data-toggle="collapse" data-target="#demo"><img src="./images/lupanegra.jpg" alt="lupanegra" width="100%"
-              height="57px"></button>
-      
+          <button data-toggle="collapse" data-target="#demo"><img src="./images/lupanegra.jpg" alt="lupanegra"
+              width="100%" height="57px"></button>
+
           <div id="demo" class="collapse">
             <form action="get.php">
               <label for="busqueda"></label>
-              <input type="text" name="Busqueda" id="busqueda" placeholder="Encuentra el producto que estas buscando...">
+              <input type="text" name="Busqueda" id="busqueda"
+                placeholder="Encuentra el producto que estas buscando...">
             </form>
           </div>
           <!--<div class="searchform"></div>-->
         </div>
       </div>
+
+      <!-- Recuadro destinado al carrito de compras-->
       <div class="cart"></div>
     </div>
+
+
+    <!-- Acá comienza el cuerpo del Index (main)-->
     <div class="main">
+
+      <!-- Carrusel extraido de Bootstrap -->
       <div class="carrusel">
         <div id="demo" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -84,20 +98,20 @@
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
           </ul>
-      
+
           <!-- The slideshow -->
           <div class="carousel-inner unihogar">
             <div class="carousel-item active">
-              <img src="./images/fondojardin.jpg" alt="jardineria"  height="280px">
+              <img src="./images/fondojardin.jpg" alt="jardineria"  height="800px" width="90%">
             </div>
             <div class="carousel-item">
-              <img src="./images/fondocomedor.jpg" alt="comedor"  height="280px">
+              <img src="./images/fondocomedor.jpg" alt="comedor" height="600px">
             </div>
             <div class="carousel-item">
-              <img src="./images/fondoliving.jpg" alt="living"  height="280px">
+              <img src="./images/fondoliving.jpg" alt="living" height="600px">
             </div>
           </div>
-      
+
           <!-- Left and right controls -->
           <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
@@ -105,30 +119,53 @@
           <a class="carousel-control-next" href="#demo" data-slide="next">
             <span class="carousel-control-next-icon"></span>
           </a>
-      
+
         </div>
       </div>
+
+      <!-- Navigation bar con el Catalogo o Sectores-->
       <div class="catalogo">
-        <div class="c1">dormitorio</div>
-        <div class="c2">living</div>
-        <div class="c3">baño</div>
-        <div class="c4">cocina</div>
-        <div class="c5">comedor</div>
-        <div class="c6">jardineria</div>
-        <div class="c7">lavanderia</div>
+        <div class="c1">
+          <a href="./pages/sectoresproductos/dormitorio.html">dormitorio</a>
+        </div>
+        <div class="c2">
+          <a href="./pages/sectoresproductos/living.html">living</a>
+        </div>
+        <div class="c3">
+          <a href="./pages/sectoresproductos/bathroom.html">baño</a>
+        </div>
+        <div class="c4">
+          <a href="./pages/sectoresproductos/cocina.html">cocina</a>
+        </div>
+        <div class="c5">
+          <a href="./pages/sectoresproductos/comedor.html">comedor</a>
+        </div>
+        <div class="c6">
+          <a href="./pages/sectoresproductos/jardineriayexterior.html">jardineria</a>
+        </div>
+        <div class="c7">
+          <a href="./pages/sectoresproductos/lavanderia.html">lavanderia</a>
+        </div>
       </div>
+
+      <!-- Grid con los productos mas vendidos-->
+
       <div class="masvendidos">
         <div class="titulo1">mas vendidos</div>
         <div class="producto1"></div>
         <div class="producto2"></div>
         <div class="producto3"></div>
       </div>
+
+      <!-- Grid con las ofertas del mes-->
       <div class="ofermes">
         <div class="titulo2">ofertas del mes</div>
         <div class="producto4"></div>
         <div class="producto5"></div>
         <div class="producto6"></div>
       </div>
+
+      <!-- Grid con los productos de venta por un lapso corto de tiempo-->
       <div class="flash">
         <div class="titulo3">ofertas flash</div>
         <div class="producto7"></div>
@@ -137,39 +174,61 @@
       </div>
     </div>
 
+
+    <!-- Est es el código del Footer que se aplica en general a todas las secciones al igual que el header-->
     <div class="footer">
       <div class="prefooter">
-         <div class="fb">
-            <a href="https://www.facebook.com/uniplast.hogar.5"><img src="./images/logofacebookcolor.jpg" alt="facebook"></a>
-          </div>
-          <div class="ig">
-            <a href="https://www.instagram.com/uniplasthogar/?hl=es"><img src="./images/logoinstacolor.jpg" alt="instagram"></a>
-          </div>
-          <div class="mp">
-            <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"><img src="./images/logomapscolor.png" alt="googlemaps"></a>
-          </div>
+        <div class="fb">
+          <a href="https://www.facebook.com/uniplast.hogar.5"><img src="./images/logofacebookcolor.jpg"
+              alt="facebook"></a>
+        </div>
+        <div class="ig">
+          <a href="https://www.instagram.com/uniplasthogar/?hl=es"><img src="./images/logoinstacolor.jpg"
+              alt="instagram"></a>
+        </div>
+        <div class="mp">
+          <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"><img src="./images/logomapscolor.png" alt="googlemaps"></a>
+        </div>
       </div>
       <div class="gps"> Acercate a nuestro local </div>
       <div class="aboutus"> Conoce nuestra empresa</div>
       <div class="tutorial"> Te ayudamos a elegir</div>
-      <div class="googlemaps"> 
-        <iframe src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.0845846717357!2d-68.80050227196796!3d-32.90842677351797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1648515761389!5m2!1ses-419!2sar" style="border:0; width: 90%; height: 90%; position:relative; top:5%; left: 6%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="googlemaps">
+        <iframe
+          src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.0845846717357!2d-68.80050227196796!3d-32.90842677351797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1648515761389!5m2!1ses-419!2sar"
+          style="border:0; width: 90%; height: 90%; position:relative; top:5%; left: 6%;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div class="textaboutus"> 
-        <p><strong>Unihogar es una empresa familiar fundada en el año 2019. Si bien la misma data de un tiempo mas o menos corto, se trata de una familia que se encuentra en el rubro del blanco y la decoración desde hace mas de 40 años.  <br><br>Algunas de las empresas que fueron creadas en la Provincia de Mendoza, fueron por ejemplo: Atelier, Los 5 Distribuidores, Telar, Telar Blanco y Deco, Uniplast, y ahora quien lleva la bandera y logo familiar es la nueva firma "Unihogar". <br> <br> Porque entendemos que la familia es nuestro pequeño universo, ese universo que elegimos para pasar nuestra vida y que es nuestro compromiso hacerlo mas cómodo y confortable para vivir en armonía.</strong></p>
+      <div class="textaboutus">
+        <p><strong>Unihogar es una empresa familiar fundada en el año 2019. Si bien la misma data de un tiempo mas o
+            menos corto, se trata de una familia que se encuentra en el rubro del blanco y la decoración desde hace mas
+            de 40 años. <br><br>Algunas de las empresas que fueron creadas en la Provincia de Mendoza, fueron por
+            ejemplo: Atelier, Los 5 Distribuidores, Telar, Telar Blanco y Deco, Uniplast, y ahora quien lleva la bandera
+            y logo familiar es la nueva firma "Unihogar". <br> <br> Porque entendemos que la familia es nuestro pequeño
+            universo, ese universo que elegimos para pasar nuestra vida y que es nuestro compromiso hacerlo mas cómodo y
+            confortable para vivir en armonía.</strong></p>
       </div>
       <div class="videosyt">
-        <iframe src="https://www.youtube.com/embed/3wzxnQDgOzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 90%; height: 90%; position:relative; top: 5%; left: 6%;"></iframe>
+        <iframe src="https://www.youtube.com/embed/3wzxnQDgOzc" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="width: 90%; height: 90%; position:relative; top: 5%; left: 6%;"></iframe>
       </div>
     </div>
   </div>
 
-<a href="#" class="subir"><img src="../images/arrow-up-solid.svg" alt="flechasubir" width="30px" height="30px"></a>
+  <a href="#" class="subir"><img src="./images/arrow-up-solid.svg" alt="flechasubir" width="30px" height="30px"></a>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
