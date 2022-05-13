@@ -8,44 +8,57 @@
 .subir {
   height: 45px;
   width: 45px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(106, 171, 255);
+  color: white;
+  background-color: #6aabff;
   text-align: center;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid white;
   position: fixed;
   right: 20px;
   bottom: 20px;
   border-radius: 50%;
-  box-shadow: 25%;
+  -webkit-box-shadow: 25%;
+          box-shadow: 25%;
 }
 
 /*Estilos y Propiedades del Index*/
 .unihogar12 {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.6fr 1.9fr 0.5fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.6fr 1.9fr 0.5fr;
+      grid-template-rows: 0.6fr 1.9fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "header" "main" "footer";
+      grid-template-areas: "header" "main" "footer";
 }
 
 /*Estilos y Propiedades del Header que se repite en todas las secciones*/
 /* ESTILOS DE LA BARRA NAVEGADORA Y DEL BANNER */
 .header {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
-  grid-template-rows: 0.4fr 1.5fr;
+  -ms-grid-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
+      grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
+  -ms-grid-rows: 0.4fr 1.5fr;
+      grid-template-rows: 0.4fr 1.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "menu social search cart" "banner banner banner banner";
+      grid-template-areas: "menu social search cart" "banner banner banner banner";
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: header;
   background-color: black;
   /*GRID DE LAS REDES SOCIALES* !Advertencia: cuando agrego las imagenes en el html no puedo hacer que encuadren dentro del recuadro previsto en el grid para esos iconos, sino que se rompe el grid y toma el tamaño de la imagen, es decir no se que propiedad tengo que usar, porque le pongo la de object fit cover o contain y no me lo reduce al tamaño del recuadro*/
   /*GRID DEL BUSCADOR !Advertencia: aquí me suceden tres cosas, la primera de ellas es que no puedo reducir el cuadro del grid al tamaño del icono de la lupa, la segunda es que el recuadro de busqueda que se activa con del dropdown no queda encajado dentro del recuadro previsto para el grid "busqueda y por último cuando hago click en el buscador se desactiva el carrusel...no se porque me pasa eso...*/
   /*GRID DEL CARRITO DE COMPRAS*/
 }
+
 .header .banner {
   height: 380px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-area: banner;
   background-image: url(../bannerempresawide.jpg);
   background-position: center;
@@ -53,25 +66,38 @@
   background-repeat: no-repeat;
   background-color: black;
 }
+
 .header .menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: menu;
   height: 100%;
   background-color: black;
   text-align: center;
-  object-position: center;
+  -o-object-position: center;
+     object-position: center;
 }
+
 .header .social {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "fb ig mp";
+      grid-template-areas: "fb ig mp";
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: social;
   height: 80%;
   background-color: black;
 }
+
 .header .social .fb {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: fb;
   background-image: url(../images/logofacebookcolor.jpg);
   background-position: center;
@@ -79,7 +105,10 @@
   background-repeat: no-repeat;
   background-color: black;
 }
+
 .header .social .ig {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: ig;
   background-image: url(../images/logoinstacolor.jpg);
   background-position: center;
@@ -87,7 +116,10 @@
   background-repeat: no-repeat;
   background-color: black;
 }
+
 .header .social .mp {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: mp;
   background-image: url(../images/logomapscolor.png);
   background-position: center;
@@ -95,24 +127,29 @@
   background-repeat: no-repeat;
   background-color: black;
 }
+
 .header .search {
   /*display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-  "ic searchform";
-  grid-area: search;*/
+        grid-template-columns: 0.5fr 1.5fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "ic searchform";
+        grid-area: search;*/
   height: 65px;
   background-color: black;
   /*.searchform { grid-area: searchform;}*/
 }
+
 .header .search .ic {
   grid-area: ic;
   background-color: black;
 }
+
 .header .cart {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   grid-area: cart;
   height: 65px;
   background-image: url(../images/carronegreo.png);
@@ -123,334 +160,478 @@
 }
 
 .main {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.2fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 0.2fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0.2fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "carrusel" "catalogo" "masvendidos" "ofermes" "flash";
+      grid-template-areas: "carrusel" "catalogo" "masvendidos" "ofermes" "flash";
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: main;
   background-color: black;
   /*Grid del CARRUSEL - !Advertencia: las imágenes les tuve que dar un alto y ancho por cuanto cuando las agregaba son enormes y se salian del recuadro, no se como hacer para que las imágenes queden dentro del contenedor*/
   /*Grid del Catalogo*/
+  /*Aplicando mixin a los titulos y a cada uno de las imagenes de los productos*/
   /*Grid y Propiedades de los Productos mas vendidos*/
   /*Grid y propiedades de las Ofertas del Mes*/
   /*Grid y Propiedades de las Ofertas Flash*/
 }
+
 .main .carrusel {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: carrusel;
   background-color: black;
   text-align: center;
 }
+
 .main .catalogo {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 0.5fr;
+      grid-template-rows: 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "h1 h2 h3 h4 h5 h6 h7";
+      grid-template-areas: "h1 h2 h3 h4 h5 h6 h7";
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: catalogo;
   font-size: 36px;
   background-color: rgba(15, 129, 206, 0.418);
   font-weight: bolder;
   height: 100px;
   background-color: black;
-  border: solid 2px rgb(255, 255, 255);
+  border: solid 2px white;
+  /*Aplicando extend a cada una de las categorías que tienen el mismo estilo*/
 }
-.main .catalogo .c1 {
+
+.main .catalogo .c1, .main .catalogo .c1--2, .main .catalogo .c1--3, .main .catalogo .c1--4, .main .catalogo .c1--5, .main .catalogo .c1--6, .main .catalogo .c1--7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: h1;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, -webkit-transform 2s;
   transition: width 2s, height 2s, transform 2s;
+  transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
   text-align: center;
   text-transform: uppercase;
   margin: 15px 15px 15px 15px;
 }
-.main .catalogo .c1:hover {
-  transform: scale(1.1);
+
+.main .catalogo .c1:hover, .main .catalogo .c1--2:hover, .main .catalogo .c1--3:hover, .main .catalogo .c1--4:hover, .main .catalogo .c1--5:hover, .main .catalogo .c1--6:hover, .main .catalogo .c1--7:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: black;
 }
-.main .catalogo .c2 {
+
+.main .catalogo .c1--2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: h2;
-  transition: width 2s, height 2s, transform 2s;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 15px 15px 15px 15px;
 }
-.main .catalogo .c2:hover {
-  transform: scale(1.1);
+
+.main .catalogo .c1--2:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: black;
 }
-.main .catalogo .c3 {
+
+.main .catalogo .c1--3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: h3;
-  transition: width 2s, height 2s, transform 2s;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 15px 15px 15px 15px;
 }
-.main .catalogo .c3:hover {
-  transform: scale(1.1);
+
+.main .catalogo .c1--3:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: black;
 }
-.main .catalogo .c4 {
+
+.main .catalogo .c1--4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   grid-area: h4;
-  transition: width 2s, height 2s, transform 2s;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 15px 15px 15px 15px;
 }
-.main .catalogo .c4:hover {
-  transform: scale(1.1);
+
+.main .catalogo .c1--4:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: black;
 }
-.main .catalogo .c5 {
+
+.main .catalogo .c1--5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
   grid-area: h5;
-  transition: width 2s, height 2s, transform 2s;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 15px 15px 15px 15px;
 }
-.main .catalogo .c5:hover {
-  transform: scale(1.1);
+
+.main .catalogo .c1--5:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: black;
 }
-.main .catalogo .c6 {
+
+.main .catalogo .c1--6 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
   grid-area: h6;
-  transition: width 2s, height 2s, transform 2s;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 15px 15px 15px 15px;
 }
-.main .catalogo .c6:hover {
-  transform: scale(1.1);
+
+.main .catalogo .c1--6:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: black;
 }
-.main .catalogo .c7 {
+
+.main .catalogo .c1--7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
   grid-area: h7;
-  transition: width 2s, height 2s, transform 2s;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 15px 15px 15px 15px;
 }
-.main .catalogo .c7:hover {
-  transform: scale(1.1);
+
+.main .catalogo .c1--7:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: black;
 }
+
 .main .masvendidos {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 0.5fr 1.0fr;
+      grid-template-rows: 0.5fr 1.0fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "titulo1 titulo1 titulo1" "producto1 producto2 producto3";
+      grid-template-areas: "titulo1 titulo1 titulo1" "producto1 producto2 producto3";
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: masvendidos;
   /*!Advertencia: en este caso me gustaría que el carrito con el precio se ponga cuando termina de posicionarse la foto en 180 grados, pero por mas que modifique el ease o el step out no lo puedo lograr.*/
 }
+
 .main .masvendidos .titulo1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: titulo1;
-  background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, right top, from(#949494), to(black));
+  background-image: linear-gradient(to right, #949494, black);
   text-align: center;
   text-transform: uppercase;
   font-size: 60px;
   height: 100px;
 }
+
 .main .masvendidos .producto1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: producto1;
-  transition: transform 4s;
   background-image: url(../images/productos/22003Q03364-KC_0.jpg);
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
+  transition: transform 4s;
+  transition: transform 4s, -webkit-transform 4s;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
+
 .main .masvendidos .producto1:hover {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: rgba(0, 0, 0, 0.397);
   text-align: center;
+  -webkit-transition: 5s;
   transition: 5s;
   background-image: url(../images/basket-shopping-solid.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .main .masvendidos .producto2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: producto2;
-  transition: transform 4s;
   background-image: url(../images/productos/51011G20021-H_0.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgb(0, 0, 0);
-}
-.main .masvendidos .producto2:hover {
-  transform: rotateY(180deg);
-  background-color: rgba(0, 0, 0, 0.397);
-  text-align: center;
-  transition: 5s;
-  background-image: url(../images/basket-shopping-solid.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.main .masvendidos .producto3 {
-  grid-area: producto3;
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
   transition: transform 4s;
-  background-image: url(../images/productos/43001C79994-M_0.jpg);
+  transition: transform 4s, -webkit-transform 4s;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
-.main .masvendidos .producto3:hover {
-  transform: rotateY(180deg);
+
+.main .masvendidos .producto2:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: rgba(0, 0, 0, 0.397);
   text-align: center;
+  -webkit-transition: 5s;
   transition: 5s;
   background-image: url(../images/basket-shopping-solid.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.main .masvendidos .producto3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: producto3;
+  background-image: url(../images/productos/43001C79994-M_0.jpg);
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
+  transition: transform 4s;
+  transition: transform 4s, -webkit-transform 4s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+.main .masvendidos .producto3:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: rgba(0, 0, 0, 0.397);
+  text-align: center;
+  -webkit-transition: 5s;
+  transition: 5s;
+  background-image: url(../images/basket-shopping-solid.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .main .ofermes {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 0.5fr 1.0fr;
+      grid-template-rows: 0.5fr 1.0fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "titulo2 titulo2 titulo2" "producto4 producto5 producto6";
+      grid-template-areas: "titulo2 titulo2 titulo2" "producto4 producto5 producto6";
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: ofermes;
 }
+
 .main .titulo2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: titulo2;
-  background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, right top, from(#949494), to(black));
+  background-image: linear-gradient(to right, #949494, black);
   text-align: center;
   text-transform: uppercase;
   font-size: 60px;
   height: 100px;
 }
+
 .main .producto4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: producto4;
-  transition: transform 4s;
   background-image: url(../images/productos/60101R20787-B_0.jpg);
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
+  transition: transform 4s;
+  transition: transform 4s, -webkit-transform 4s;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
+
 .main .producto4:hover {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: rgba(0, 0, 0, 0.397);
   text-align: center;
+  -webkit-transition: 5s;
   transition: 5s;
   background-image: url(../images/basket-shopping-solid.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .main .producto5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: producto5;
-  transition: transform 4s;
   background-image: url(../images/productos/64011Z20793-B_0.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgb(0, 0, 0);
-}
-.main .producto5:hover {
-  transform: rotateY(180deg);
-  background-color: rgba(0, 0, 0, 0.397);
-  text-align: center;
-  transition: 5s;
-  background-image: url(../images/basket-shopping-solid.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.main .producto6 {
-  grid-area: producto6;
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
   transition: transform 4s;
-  background-image: url(../images/productos/A046-3-ROSE.jpg);
+  transition: transform 4s, -webkit-transform 4s;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
-.main .producto6:hover {
-  transform: rotateY(180deg);
+
+.main .producto5:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: rgba(0, 0, 0, 0.397);
   text-align: center;
+  -webkit-transition: 5s;
   transition: 5s;
   background-image: url(../images/basket-shopping-solid.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.main .producto6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: producto6;
+  background-image: url(../images/productos/A046-3-ROSE.jpg);
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
+  transition: transform 4s;
+  transition: transform 4s, -webkit-transform 4s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+.main .producto6:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: rgba(0, 0, 0, 0.397);
+  text-align: center;
+  -webkit-transition: 5s;
+  transition: 5s;
+  background-image: url(../images/basket-shopping-solid.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .main .flash {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 0.5fr 1.0fr;
+      grid-template-rows: 0.5fr 1.0fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "titulo3 titulo3 titulo3" "producto7 producto8 producto9";
+      grid-template-areas: "titulo3 titulo3 titulo3" "producto7 producto8 producto9";
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: flash;
 }
+
 .main .titulo3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: titulo3;
-  background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, right top, from(#949494), to(black));
+  background-image: linear-gradient(to right, #949494, black);
   text-align: center;
   text-transform: uppercase;
   font-size: 60px;
   height: 100px;
 }
+
 .main .producto7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: producto7;
-  transition: transform 4s;
   background-image: url(../images/productos/71001A01720-RL_0.jpg);
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
+  transition: transform 4s;
+  transition: transform 4s, -webkit-transform 4s;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
+
 .main .producto7:hover {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: rgba(0, 0, 0, 0.397);
   text-align: center;
+  -webkit-transition: 5s;
   transition: 5s;
   background-image: url(../images/basket-shopping-solid.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .main .producto8 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: producto8;
-  transition: transform 4s;
   background-image: url(../images/productos/23901I76417-KN_0.jpg);
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
+  transition: transform 4s;
+  transition: transform 4s, -webkit-transform 4s;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
+
 .main .producto8:hover {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: rgba(0, 0, 0, 0.397);
   text-align: center;
+  -webkit-transition: 5s;
   transition: 5s;
   background-image: url(../images/basket-shopping-solid.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .main .producto9 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: producto9;
-  transition: transform 4s;
   background-image: url(../images/productos/22063K00041-H_0.jpg);
+  -webkit-transition: -webkit-transform 4s;
+  transition: -webkit-transform 4s;
+  transition: transform 4s;
+  transition: transform 4s, -webkit-transform 4s;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
+
 .main .producto9:hover {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: rgba(0, 0, 0, 0.397);
   text-align: center;
+  -webkit-transition: 5s;
   transition: 5s;
   background-image: url(../images/basket-shopping-solid.svg);
   background-size: contain;
@@ -460,184 +641,401 @@
 
 /*Propiedades del Footer - El cual es exactamente el mismo para todas las secciones*/
 .footer {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 0.5fr 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "gps aboutus tutorial" "googlemaps textaboutus videosyt";
+      grid-template-areas: "gps aboutus tutorial" "googlemaps textaboutus videosyt";
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: footer;
   background-color: black;
   height: 67%;
 }
+
 .footer .prefooter {
   /*grid-area: prefooter*/
   display: none;
 }
+
 .footer .gps {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: gps;
-  background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(106, 171, 255));
+  background-image: -webkit-gradient(linear, left top, right top, from(#949494), to(#6aabff));
+  background-image: linear-gradient(to right, #949494, #6aabff);
   text-align: center;
   text-transform: uppercase;
   font-size: 24px;
   height: 60%;
-  text-decoration: double;
+  -webkit-text-decoration: double;
+          text-decoration: double;
 }
+
 .footer .aboutus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: aboutus;
-  background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(106, 171, 255));
+  background-image: -webkit-gradient(linear, left top, right top, from(#949494), to(#6aabff));
+  background-image: linear-gradient(to right, #949494, #6aabff);
   text-align: center;
   text-transform: uppercase;
   font-size: 24px;
   height: 60%;
 }
+
 .footer .tutorial {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: tutorial;
-  background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(106, 171, 255));
+  background-image: -webkit-gradient(linear, left top, right top, from(#949494), to(#6aabff));
+  background-image: linear-gradient(to right, #949494, #6aabff);
   text-align: center;
   text-transform: uppercase;
   font-size: 24px;
   height: 60%;
 }
+
 .footer .googlemaps {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: googlemaps;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), rgb(106, 171, 255));
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), #6aabff);
 }
+
 .footer .textaboutus {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: textaboutus;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), rgb(106, 171, 255));
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), #6aabff);
   color: white;
 }
+
 .footer .videosyt {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: videosyt;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), rgb(106, 171, 255));
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), #6aabff);
 }
 
 /*****ESTILOS DE LA SECCIÓN PRODUCTOS*****/
 .products {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
   gap: 25px 25px;
   grid-auto-flow: row;
-  grid-template-areas: "area1 area2 area3" "area4 area5 area6" "area7 area8 area9";
+      grid-template-areas: "area1 area2 area3" "area4 area5 area6" "area7 area8 area9";
   background-color: black;
   font-size: 24px;
-  color: rgb(255, 255, 255);
+  color: white;
 }
+
 .products .area1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: area1;
 }
+
 .products .area2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: area2;
 }
+
 .products .area3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: area3;
 }
+
 .products .area4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: area4;
 }
+
 .products .area5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: area5;
 }
+
 .products .area6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: area6;
 }
+
 .products .area7 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: area7;
 }
+
 .products .area8 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: area8;
 }
+
 .products .area9 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: area9;
 }
 
 .taitle {
   font-size: 30px;
   text-transform: uppercase;
-  text-decoration: double;
-  border: solid 2px rgb(255, 255, 255);
+  -webkit-text-decoration: double;
+          text-decoration: double;
+  border: solid 2px white;
 }
 
 .fotis {
   height: 50%;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, -webkit-transform 2s;
   transition: width 2s, height 2s, transform 2s;
+  transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
 }
+
 .fotis .fotis:hover {
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   background-color: black;
   opacity: 0.6;
 }
 
 /*GRID Y ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*/
 .produtto {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
   gap: 25px 2px;
   grid-auto-flow: row;
-  grid-template-areas: "card1 card2 card3 card4" "card5 card6 card7 card8" "card9 card10 card11 card12";
+      grid-template-areas: "card1 card2 card3 card4" "card5 card6 card7 card8" "card9 card10 card11 card12";
   background-color: black;
 }
 
 .card1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: card1;
 }
 
 .card2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: card2;
 }
 
 .card3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: card3;
 }
 
 .card4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   grid-area: card4;
 }
 
 .card5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: card5;
 }
 
 .card6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: card6;
 }
 
 .card7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: card7;
 }
 
 .card8 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
   grid-area: card8;
 }
 
 .card9 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: card9;
 }
 
 .card10 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: card10;
 }
 
 .card11 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: card11;
 }
 
 .card12 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
   grid-area: card12;
+}
+
+/***PAGINA TUTORIALES***/
+.video-tut1 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 20px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+.video-tut2 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+
+.video-tut3 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 40px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+
+.video-tut4 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 50px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.video-tut5 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 60px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 60px;
+}
+
+.video-tut6 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 70px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 70px;
+}
+
+.video-tut7 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 75px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 75px;
+}
+
+.video-tut8 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 80px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 80px;
+}
+
+.video-tut9 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 85px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 85px;
+}
+
+.video-tut10 {
+  background-color: grey;
+  height: 150px;
+  width: 100%;
+  border: solid black 2px;
+  text-align: center;
+  font-size: 90px;
+  color: red;
+  text-transform: uppercase;
+  border-radius: 90px;
 }
 
 /****** VERSION MOBILE *******/
 @media only screen and (max-width: 576px) {
   .header {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
-    grid-template-rows: 0.5fr 1.5fr;
+    -ms-grid-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
+        grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
+    -ms-grid-rows: 0.5fr 1.5fr;
+        grid-template-rows: 0.5fr 1.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "banner banner banner banner" "menu menu search cart";
+        grid-template-areas: "banner banner banner banner" "menu menu search cart";
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: header;
     height: 350px;
   }
@@ -645,6 +1043,9 @@
     height: 250px;
   }
   .header .menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: menu;
     height: 53px;
   }
@@ -655,12 +1056,17 @@
     display: none;
   }
   .header .search {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 0.5fr;
-    grid-template-rows: 1fr;
+    -ms-grid-columns: 0.5fr;
+        grid-template-columns: 0.5fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     gap: 0px;
     grid-auto-flow: row;
-    grid-template-areas: "ic";
+        grid-template-areas: "ic";
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
     grid-area: search;
     height: 53px;
   }
@@ -670,18 +1076,24 @@
   .header .cart {
     height: 53px;
   }
-
   .main {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr 1.5fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 0.5fr 1.5fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1.5fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "carrusel" "masvendidos" "ofermes" "flash";
+        grid-template-areas: "carrusel" "masvendidos" "ofermes" "flash";
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: main;
     height: 600px;
   }
   .main .carrusel {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: carrusel;
     background-color: black;
     height: 300px;
@@ -690,24 +1102,34 @@
     display: none;
   }
   .main .masvendidos {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1.5fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 0.5fr 1.5fr;
+        grid-template-rows: 0.5fr 1.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "titulo1 titulo1 titulo1";
+        grid-template-areas: "titulo1 titulo1 titulo1";
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: masvendidos;
     height: 100px;
   }
   .main .masvendidos .titulo1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: titulo1;
     height: 100px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), rgb(106, 171, 255));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.849)), to(#6aabff));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), #6aabff);
     background-position: center;
     background-size: cover;
     color: black;
     font-size: 40px;
-    text-decoration: double;
+    -webkit-text-decoration: double;
+            text-decoration: double;
     text-transform: uppercase;
     text-align: center;
     text-shadow: 25px;
@@ -722,24 +1144,34 @@
     display: none;
   }
   .main .ofermes {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1.5fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 0.5fr 1.5fr;
+        grid-template-rows: 0.5fr 1.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "titulo2 titulo2 titulo2";
+        grid-template-areas: "titulo2 titulo2 titulo2";
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: ofermes;
     height: 100px;
   }
   .main .ofermes .titulo2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: titulo2;
     height: 100px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), rgb(106, 171, 255));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.849)), to(#6aabff));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), #6aabff);
     background-position: center;
     background-size: cover;
     color: black;
     font-size: 40px;
-    text-decoration: double;
+    -webkit-text-decoration: double;
+            text-decoration: double;
     text-transform: uppercase;
     text-align: center;
     text-shadow: 25px;
@@ -754,24 +1186,34 @@
     display: none;
   }
   .main .flash {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1.5fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 0.5fr 1.5fr;
+        grid-template-rows: 0.5fr 1.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "titulo3 titulo3 titulo3";
+        grid-template-areas: "titulo3 titulo3 titulo3";
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
     grid-area: flash;
     height: 100px;
   }
   .main .flash .titulo3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: titulo3;
     height: 100px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), rgb(106, 171, 255));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.849)), to(#6aabff));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), #6aabff);
     background-position: center;
     background-size: cover;
     color: black;
     font-size: 40px;
-    text-decoration: double;
+    -webkit-text-decoration: double;
+            text-decoration: double;
     text-transform: uppercase;
     text-align: center;
     text-shadow: 25px;
@@ -785,88 +1227,91 @@
   .main .flash .producto9 {
     display: none;
   }
-
   /*!Advertencia: no se porque motivos si está previsto que se vea el pre-footer que sería el footer de la version mobile y que se veria cuando el ancho entrara en el media queries, no se visualiza, no entiendo donde está el problema.*/
   .footer {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "prefooter";
+        grid-template-areas: "prefooter";
   }
   .footer .prefooter {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: prefooter;
-    background-color: rgb(238, 84, 13);
+    background-color: #ee540d;
   }
-
   .gps {
     display: none;
   }
-
   .aboutus {
     display: none;
   }
-
   .tutorial {
     display: none;
   }
-
   .googlemaps {
     display: none;
   }
-
   .textaboutus {
     display: none;
   }
-
   .videosyt {
     display: none;
   }
-
   /*VERSION MOBILE DE PRODUCTOS*/
   .products {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "area1" "area2" "area3" "area4" "area5" "area6" "area7";
+        grid-template-areas: "area1" "area2" "area3" "area4" "area5" "area6" "area7";
     /*"area8"
-    "area9"*/
+        "area9"*/
   }
-
   .fotis {
     height: 70%;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, -webkit-transform 2s;
     transition: width 2s, height 2s, transform 2s;
+    transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
   }
   .fotis .fotis:hover {
-    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
     background-color: black;
     opacity: 0.6;
   }
-
   .taitle {
     font-size: 30px;
     text-transform: uppercase;
-    text-decoration: double;
+    -webkit-text-decoration: double;
+            text-decoration: double;
     border: solid 2px white;
     text-align: center;
   }
-
   .secciones {
     display: none;
   }
-
   .area8 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
     grid-area: area8;
     display: none;
   }
-
   .area9 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
     grid-area: area9;
     display: none;
   }
 }
-
 /*# sourceMappingURL=estilos.css.map */

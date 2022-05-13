@@ -188,88 +188,66 @@ $color4: rgba(128, 128, 128, 0.589);
             text-transform: uppercase;
             margin: 15px 15px 15px 15px;
             }
-            
             .c1:hover {
                 transform: scale(1.1);
                 background-color: black;
             }
             
-            .c2 { grid-area: h2;
-                transition: width 2s, height 2s, transform 2s;
-                text-align: center;
-            text-transform: uppercase;
-            margin: 15px 15px 15px 15px
-            }
-            
-            .c2:hover {
-                transform: scale(1.1);
-                background-color: black;
-            
-            }
-            
-            .c3 { grid-area: h3;
-                transition: width 2s, height 2s, transform 2s;
-                text-align: center;
-                text-transform: uppercase;
-                margin: 15px 15px 15px 15px
-            }
-            
-            .c3:hover {
-                transform: scale(1.1);
-                background-color: black;
-            
-            }
-            
-            .c4 { grid-area: h4; 
-                transition: width 2s, height 2s, transform 2s;
-                text-align: center;
-                text-transform: uppercase;
-                margin: 15px 15px 15px 15px
-            }
-            
-            .c4:hover {
-                transform: scale(1.1);
-                background-color: black;
-            
-            }
-            
-            .c5 { grid-area: h5; 
-                transition: width 2s, height 2s, transform 2s;
-                text-align: center;
-                text-transform: uppercase;
-                margin: 15px 15px 15px 15px
-            }
-            
-            .c5:hover {
+            /*Aplicando extend a cada una de las categorías que tienen el mismo estilo*/
+            .c1--2 { grid-area: h2; @extend .c1;}
+            .c1--2:hover {
                 transform: scale(1.1);
                 background-color: black;
             }
             
-            .c6 { grid-area: h6; 
-                transition: width 2s, height 2s, transform 2s;
-                text-align: center;
-                text-transform: uppercase;
-                margin: 15px 15px 15px 15px
-            }
-            
-            .c6:hover {
+            .c1--3 { grid-area: h3; @extend .c1;}
+            .c1--3:hover {
                 transform: scale(1.1);
                 background-color: black;
             }
             
-            .c7 { grid-area: h7;
-                transition: width 2s, height 2s, transform 2s;
-                text-align: center;
-                text-transform: uppercase;
-                margin: 15px 15px 15px 15px
+            .c1--4 { grid-area: h4; @extend .c1;}
+            .c1--4:hover {
+                transform: scale(1.1);
+                background-color: black;
             }
             
-            .c7:hover {
+            .c1--5 { grid-area: h5; @extend .c1;}
+            .c1--5:hover {
+                transform: scale(1.1);
+                background-color: black;
+            }
+            
+            .c1--6 { grid-area: h6; @extend .c1;}
+            .c1--6:hover {
+                transform: scale(1.1);
+                background-color: black;
+            }
+            
+            .c1--7 { grid-area: h7; @extend .c1;}
+            .c1--7:hover {
                 transform: scale(1.1);
                 background-color: black;
             }
     }
     
+    /*Aplicando mixin a los titulos y a cada uno de las imagenes de los productos*/
+    @mixin titulos {
+        background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 60px;
+        height: 100px;
+    }
+
+    @mixin productito {
+        transition: transform 4s;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgb(0, 0, 0);
+    }
+
     /*Grid y Propiedades de los Productos mas vendidos*/
     .masvendidos {
         display: grid;
@@ -282,21 +260,14 @@ $color4: rgba(128, 128, 128, 0.589);
             "producto1 producto2 producto3";
         grid-area: masvendidos;
 
-            .titulo1 { grid-area: titulo1;
-            background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 60px;
-            height: 100px;
+            .titulo1 { 
+                grid-area: titulo1;
+                @include titulos; 
             }
         
             .producto1 { grid-area: producto1;
-                transition: transform 4s;
                 background-image: url(../images/productos/22003Q03364-KC_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
             }
             
             /*!Advertencia: en este caso me gustaría que el carrito con el precio se ponga cuando termina de posicionarse la foto en 180 grados, pero por mas que modifique el ease o el step out no lo puedo lograr.*/
@@ -312,12 +283,9 @@ $color4: rgba(128, 128, 128, 0.589);
             }
             
             .producto2 { grid-area: producto2;
-                transition: transform 4s;
                 background-image: url(../images/productos/51011G20021-H_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
+
             }
             
             .producto2:hover{
@@ -332,12 +300,9 @@ $color4: rgba(128, 128, 128, 0.589);
             }
             
             .producto3 { grid-area: producto3;
-                transition: transform 4s;
                 background-image: url(../images/productos/43001C79994-M_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
+
             }
             
             .producto3:hover{
@@ -367,21 +332,14 @@ $color4: rgba(128, 128, 128, 0.589);
 
             .titulo2 {
                 grid-area: titulo2;
-                background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 60px;
-                height: 100px;
+                @include titulos; 
             }
 
             .producto4 {
                 grid-area: producto4;
-                transition: transform 4s;
                 background-image: url(../images/productos/60101R20787-B_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
+
             }
 
             .producto4:hover {
@@ -397,12 +355,9 @@ $color4: rgba(128, 128, 128, 0.589);
 
             .producto5 {
                 grid-area: producto5;
-                transition: transform 4s;
                 background-image: url(../images/productos/64011Z20793-B_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
+
             }
 
             .producto5:hover {
@@ -418,12 +373,8 @@ $color4: rgba(128, 128, 128, 0.589);
 
             .producto6 {
                 grid-area: producto6;
-                transition: transform 4s;
                 background-image: url(../images/productos/A046-3-ROSE.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
             }
 
             .producto6:hover {
@@ -453,21 +404,14 @@ $color4: rgba(128, 128, 128, 0.589);
 
             .titulo3 {
                 grid-area: titulo3;
-                background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 60px;
-                height: 100px;
+                @include titulos; 
             }
 
             .producto7 {
                 grid-area: producto7;
-                transition: transform 4s;
                 background-image: url(../images/productos/71001A01720-RL_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
+
             }
 
             .producto7:hover {
@@ -483,12 +427,9 @@ $color4: rgba(128, 128, 128, 0.589);
 
             .producto8 {
                 grid-area: producto8;
-                transition: transform 4s;
                 background-image: url(../images/productos/23901I76417-KN_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
+
             }
 
             .producto8:hover {
@@ -504,12 +445,8 @@ $color4: rgba(128, 128, 128, 0.589);
 
             .producto9 {
                 grid-area: producto9;
-                transition: transform 4s;
                 background-image: url(../images/productos/22063K00041-H_0.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: rgb(0, 0, 0);
+                @include productito;
             }
 
             .producto9:hover {
@@ -697,6 +634,35 @@ $color4: rgba(128, 128, 128, 0.589);
 
 .card12 {
     grid-area: card12;
+}
+
+/***PAGINA TUTORIALES***/
+$tutorial: (
+    tut1: 20px,
+    tut2: 30px, 
+    tut3: 40px,
+    tut4: 50px,
+    tut5: 60px, 
+    tut6: 70px, 
+    tut7: 75px, 
+    tut8: 80px, 
+    tut9: 85px, 
+    tut10: 90px
+); 
+
+
+@each $tut, $font in $tutorial {
+    .video-#{$tut} {
+        background-color: grey;
+        height: 150px;
+        width: 100%;
+        border: solid black 2px;
+        text-align: center;
+        font-size: $font;
+        color: red;
+        text-transform: uppercase;
+        border-radius: $font;
+    }
 }
 
 
