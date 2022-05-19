@@ -1,530 +1,233 @@
-$color1: rgb(106, 171, 255); 
-$color2: rgb(255, 255, 255); 
-$color3: black; 
-$color4: rgba(128, 128, 128, 0.589); 
+$color1: black; 
+$color2: rgba(0, 138, 255, 0.705); 
+$color3: rgba(128, 128, 128, 0.700); 
+$color4: white; 
+$font1:'Bangers', cursive;
+
 
 *{
     margin: 0px;
     padding: 0px;
 }
 
-/*boton para subir al principio de pagina*/
-.subir {
-    height: 45px;
-    width: 45px;
-    color: $color2;
-    background-color: $color1;
-    text-align: center;
-    border: 2px solid $color2;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    border-radius: 50%;
-    box-shadow: 25%;
+html{
+    scroll-behavior: smooth;
 }
 
-/*Estilos y Propiedades del Index*/
-.unihogar12 {
+.unihogar {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 1.9fr 0.5fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "header"
         "main"
         "footer";
-}
-/*Estilos y Propiedades del Header que se repite en todas las secciones*/
-/* ESTILOS DE LA BARRA NAVEGADORA Y DEL BANNER */
-.header {
-    display: grid;
-    grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
-    grid-template-rows: 0.4fr 1.5fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "menu social search cart"
-        "banner banner banner banner";
-    grid-area: header;
-    background-color: black;
-
-    .banner {
-        height: 380px;
-        grid-area: banner;
-        background-image: url(../bannerempresawide.jpg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: black;
-    }
-    
-    .menu {
-        grid-area: menu;
-        height: 100%;
-        background-color: black;
-        text-align: center;
-        object-position: center;
-    }
-    
-    /*GRID DE LAS REDES SOCIALES* !Advertencia: cuando agrego las imagenes en el html no puedo hacer que encuadren dentro del recuadro previsto en el grid para esos iconos, sino que se rompe el grid y toma el tamaño de la imagen, es decir no se que propiedad tengo que usar, porque le pongo la de object fit cover o contain y no me lo reduce al tamaño del recuadro*/
-    .social {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "fb ig mp";
-        grid-area: social;
-        height: 80%;
-        background-color: black;
-    
-            .fb {
-                grid-area: fb;
-                background-image: url(../images/logofacebookcolor.jpg);
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-color: black;
-            }
-            
-            .ig {
-                grid-area: ig;
-                background-image: url(../images/logoinstacolor.jpg);
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-color: black;
-            }
-            
-            .mp {
-                grid-area: mp;
-                background-image: url(../images/logomapscolor.png);
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-color: black;
-            }
-    }
-    
-
-    /*GRID DEL BUSCADOR !Advertencia: aquí me suceden tres cosas, la primera de ellas es que no puedo reducir el cuadro del grid al tamaño del icono de la lupa, la segunda es que el recuadro de busqueda que se activa con del dropdown no queda encajado dentro del recuadro previsto para el grid "busqueda y por último cuando hago click en el buscador se desactiva el carrusel...no se porque me pasa eso...*/
-    .search {
-        /*display: grid;
-        grid-template-columns: 0.5fr 1.5fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "ic searchform";
-        grid-area: search;*/
-        height: 65px;
-        background-color: black;
-
+    color: $color4;
         
-        .ic {
-            grid-area: ic;
-            background-color: black;
+        .header {
+            grid-area: header;
+            background-color: $color1;
+                .navbar{
+                    font-size: 20px;
+                    padding: 15px;
+                    background-color: $color1 !important;
+                    border: $color4 solid 1px;
+                    text-transform: uppercase;
+                    font-family: $font1;
+                    
+                    .dropdown-menu{
+                        background-color: rgba(55, 173, 194, 0.671);
+                        font-size: 20px;
+                    }
+                    .btn-primary{
+                        width: 5%;
+                        height: 40px;
+                        background-color: $color1;
+                        background-image: url(../images/carronegreo.png);
+                        background-size: contain;
+                        object-fit: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .carrito{
+                        margin: 10px;
+                    }
+                }
+                .banner{
+                    width:100%; 
+                    height:100%
+                }
+                .bannerimagen{
+                    width:100%; 
+                    max-height:100%; 
+                    aspect-ratio:1200/475;
+                }
         }
-        
-        /*.searchform { grid-area: searchform;}*/
-    }
-    
-    /*GRID DEL CARRITO DE COMPRAS*/
-    .cart {
-        grid-area: cart;
-        height: 65px;
-        background-image: url(../images/carronegreo.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: black;
+
+        .main {
+            grid-area: main; 
+            background-image: linear-gradient($color1, $color4);
+
+            .categorias{
+                display: flex;
+                flex-direction:row;
+                flex-wrap: wrap;
+                justify-content: center;
+                justify-content: space-between;
+                padding: 10px;
+                margin: 10px;
+                text-transform: uppercase;
+                font-size: 30px;
+                border: solid 5px $color3; 
+                font-family: $font1;
+
+                .option-categorias{
+                transition: width 2s, height 2s, transform 1s;
+                }
+
+                .option-categorias:hover{
+                    transform: scale(1.2);
+                    background-color: $color2;
+                    border-radius: 15%;
+                }
+            }
+
+
+            .ofermes-h1{
+                background-image: url(../images/low-poly-grid-haikei.svg);
+                background-size: contain;
+                text-align: center;
+                font-family: $font1;
+                font-size: 70px;
+            }
+
+            .carousel-item {
+                height: 450px;
+            }
+            
+            .cards-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .card img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            
+            .card {
+                margin: 0 0.5em;
+                box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+                border: none;
+                border-radius: 0;
+            }
+            
+            .carousel-inner {
+                padding: 1em;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: #e1e1e1;
+                width: 5vh;
+                height: 5vh;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            @media (min-width: 768px) {
+                .card img {
+                    height: 11em;
+                }
+            }
+        }
+
+        .footer {
+            grid-area: footer;
+            background-image: linear-gradient($color3, $color4);
+            color: $color1;
+            font-family: $font1;
+            text-align: center;
+            font-size: 20px;
+            
+            .social{
+                background-color: $color1;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 120px;
+                .iconoredes{
+                    border: solid 5px black;
+                    margin: 2px;
+                }
+            }
+            .subfooter{
+                display: flex; 
+                justify-content: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .iconosubfooter{
+                    max-width: 25px;
+                    max-height: 25px;
+                }
+            }
+        }
+}
+
+@media (min-width: 769px) {
+    .footer h3 { display: none; 
+        visibility: hidden;
     }
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.2fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "carrusel"
-        "catalogo"
-        "masvendidos"
-        "ofermes"
-        "flash";
-    grid-area: main;
-    background-color: black;
-
-    /*Grid del CARRUSEL - !Advertencia: las imágenes les tuve que dar un alto y ancho por cuanto cuando las agregaba son enormes y se salian del recuadro, no se como hacer para que las imágenes queden dentro del contenedor*/
-    .carrusel {
-        grid-area: carrusel;
-        background-color: black;
-        text-align: center;
+@media (max-width: 768px) {
+    .unihogar{
+        height: 800px;
     }
 
-/*Grid del Catalogo*/
-    .catalogo {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "h1 h2 h3 h4 h5 h6 h7";
-        grid-area: catalogo;
-        font-size: 36px;
-        background-color: rgba(15, 129, 206, 0.418);
-        font-weight: bolder;
-        height: 100px;
-        background-color: black;
-        border: solid 2px $color2;
+    .categorias {visibility: hidden;}
 
-            .c1 { grid-area: h1;
-            transition: width 2s, height 2s, transform 2s;
-            text-align: center;
-            text-transform: uppercase;
-            margin: 15px 15px 15px 15px;
-            }
-            .c1:hover {
-                transform: scale(1.1);
-                background-color: black;
-            }
-            
-            /*Aplicando extend a cada una de las categorías que tienen el mismo estilo*/
-            .c1--2 { grid-area: h2; @extend .c1;}
-            .c1--2:hover {
-                transform: scale(1.1);
-                background-color: black;
-            }
-            
-            .c1--3 { grid-area: h3; @extend .c1;}
-            .c1--3:hover {
-                transform: scale(1.1);
-                background-color: black;
-            }
-            
-            .c1--4 { grid-area: h4; @extend .c1;}
-            .c1--4:hover {
-                transform: scale(1.1);
-                background-color: black;
-            }
-            
-            .c1--5 { grid-area: h5; @extend .c1;}
-            .c1--5:hover {
-                transform: scale(1.1);
-                background-color: black;
-            }
-            
-            .c1--6 { grid-area: h6; @extend .c1;}
-            .c1--6:hover {
-                transform: scale(1.1);
-                background-color: black;
-            }
-            
-            .c1--7 { grid-area: h7; @extend .c1;}
-            .c1--7:hover {
-                transform: scale(1.1);
-                background-color: black;
-            }
+    .footer-h1 {
+        display: none;
     }
-    
-    /*Aplicando mixin a los titulos y a cada uno de las imagenes de los productos*/
-    @mixin titulos {
-        background-image: linear-gradient(to right, rgb(148, 148, 148), rgb(0, 0, 0));
+    .footer h3 {
         text-align: center;
         text-transform: uppercase;
-        font-size: 60px;
-        height: 100px;
-    }
-
-    @mixin productito {
-        transition: transform 4s;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: rgb(0, 0, 0);
-    }
-
-    /*Grid y Propiedades de los Productos mas vendidos*/
-    .masvendidos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 1.0fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "titulo1 titulo1 titulo1"
-            "producto1 producto2 producto3";
-        grid-area: masvendidos;
-
-            .titulo1 { 
-                grid-area: titulo1;
-                @include titulos; 
-            }
+        font-size: 36px;
         
-            .producto1 { grid-area: producto1;
-                background-image: url(../images/productos/22003Q03364-KC_0.jpg);
-                @include productito;
-            }
-            
-            /*!Advertencia: en este caso me gustaría que el carrito con el precio se ponga cuando termina de posicionarse la foto en 180 grados, pero por mas que modifique el ease o el step out no lo puedo lograr.*/
-            .producto1:hover{
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-            
-            .producto2 { grid-area: producto2;
-                background-image: url(../images/productos/51011G20021-H_0.jpg);
-                @include productito;
-
-            }
-            
-            .producto2:hover{
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-            
-            .producto3 { grid-area: producto3;
-                background-image: url(../images/productos/43001C79994-M_0.jpg);
-                @include productito;
-
-            }
-            
-            .producto3:hover{
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
     }
 
-    /*Grid y propiedades de las Ofertas del Mes*/
-    .ofermes {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 1.0fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "titulo2 titulo2 titulo2"
-            "producto4 producto5 producto6";
-        grid-area: ofermes;
+    .subfooter{
+        display:flexbox;
+        flex-direction: column;
+        .iconosubfooter{
+            width: 5%;
+            height: 5%;
+        }
     }
-
-            .titulo2 {
-                grid-area: titulo2;
-                @include titulos; 
-            }
-
-            .producto4 {
-                grid-area: producto4;
-                background-image: url(../images/productos/60101R20787-B_0.jpg);
-                @include productito;
-
-            }
-
-            .producto4:hover {
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            .producto5 {
-                grid-area: producto5;
-                background-image: url(../images/productos/64011Z20793-B_0.jpg);
-                @include productito;
-
-            }
-
-            .producto5:hover {
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            .producto6 {
-                grid-area: producto6;
-                background-image: url(../images/productos/A046-3-ROSE.jpg);
-                @include productito;
-            }
-
-            .producto6:hover {
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-
-            }
-
-    /*Grid y Propiedades de las Ofertas Flash*/
-    .flash {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 1.0fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "titulo3 titulo3 titulo3"
-            "producto7 producto8 producto9";
-        grid-area: flash;
-    }
-
-            .titulo3 {
-                grid-area: titulo3;
-                @include titulos; 
-            }
-
-            .producto7 {
-                grid-area: producto7;
-                background-image: url(../images/productos/71001A01720-RL_0.jpg);
-                @include productito;
-
-            }
-
-            .producto7:hover {
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            .producto8 {
-                grid-area: producto8;
-                background-image: url(../images/productos/23901I76417-KN_0.jpg);
-                @include productito;
-
-            }
-
-            .producto8:hover {
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            .producto9 {
-                grid-area: producto9;
-                background-image: url(../images/productos/22063K00041-H_0.jpg);
-                @include productito;
-            }
-
-            .producto9:hover {
-                transform: rotateY(180deg);
-                background-color: rgba(0, 0, 0, 0.397);
-                text-align: center;
-                transition: 5s;
-                background-image: url(../images/basket-shopping-solid.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
+    
 }
 
-/*Propiedades del Footer - El cual es exactamente el mismo para todas las secciones*/
-.footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        /*"prefooter prefooter prefooter"*/
-        "gps aboutus tutorial"
-        "googlemaps textaboutus videosyt";
-    grid-area: footer;
-    background-color: black;
-    height: 67%;
+@media (max-width: 500px) {
 
+    .unihogar {
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        color: $color4;
+    }
 
-        .prefooter {
-            /*grid-area: prefooter*/
-            display: none;
-        }
-
-        .gps {
-            grid-area: gps;
-            background-image: linear-gradient(to right, rgb(148, 148, 148), $color1);
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 24px;
-            height: 60%;
-            text-decoration: double;
-        }
-
-        .aboutus {
-            grid-area: aboutus;
-            background-image: linear-gradient(to right, rgb(148, 148, 148), $color1);
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 24px;
-            height: 60%;
-        }
-
-        .tutorial {
-            grid-area: tutorial;
-            background-image: linear-gradient(to right, rgb(148, 148, 148), $color1);
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 24px;
-            height: 60%;
-        }
-
-        .googlemaps {
-            grid-area: googlemaps;
-            background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), $color1)
-        }
-
-        .textaboutus {
-            grid-area: textaboutus;
-            background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356),$color1);
-            color: white;
-        }
-
-        .videosyt {
-            grid-area: videosyt;
-            background-image: radial-gradient(circle, rgba(0, 0, 0, 0.226), rgba(122, 122, 122, 0.356), $color1)
-        }
 }
 
 /*****ESTILOS DE LA SECCIÓN PRODUCTOS*****/
@@ -665,292 +368,24 @@ $tutorial: (
     }
 }
 
-
-/****** VERSION MOBILE *******/
-@media only screen and (max-width:576px) {
-
-    .header {
-        display: grid;
-        grid-template-columns: 1.4fr 0.9fr 1.2fr 0.5fr;
-        grid-template-rows: 0.5fr 1.5fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "banner banner banner banner"
-            "menu menu search cart";
-        grid-area: header;
-        height: 350px;
-
-            .banner {
-                height: 250px;
-            }
-        
-            .menu {
-                grid-area: menu;
-                height: 53px;
-            }
-        
-            .navbar-brand {
-                display: none;
-            }
-        
-            .social {
-                display: none;
-            }
-        
-            .search {
-                display: grid;
-                grid-template-columns: 0.5fr;
-                grid-template-rows: 1fr;
-                gap: 0px;
-                grid-auto-flow: row;
-                grid-template-areas:
-                    "ic";
-                grid-area: search;
-                height: 53px
-            }
-        
-            .searchform {
-                display: none;
-            }
-        
-            .cart {
-                height: 53px
-            }
-    }
-    
-    .main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.5fr 1.5fr 1fr 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "carrusel"
-            /*"catalogo"*/
-            "masvendidos"
-            "ofermes"
-            "flash";
-        grid-area: main;
-        height: 600px;
-
-        .carrusel {
-            grid-area: carrusel;
-            background-color: black;
-            height: 300px;
-    
-        }
-    
-        .catalogo {
-            display: none;
-        }
-    
-        .masvendidos {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 0.5fr 1.5fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            grid-template-areas:
-                "titulo1 titulo1 titulo1"
-                /*"producto1 producto2 producto3"*/
-            ;
-            grid-area: masvendidos;
-            height: 100px;
-                .titulo1 {
-                    grid-area: titulo1;
-                    height: 100px;
-
-                    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), $color1);
-            
-                    background-position: center;
-                    background-size: cover;
-                    color: black;
-                    font-size: 40px;
-                    text-decoration: double;
-                    text-transform: uppercase;
-                    text-align: center;
-                    text-shadow: 25px;
-                }
-                .producto1 {
-                    display: none;
-                }
-                .producto2 {
-                    display: none;
-                }
-                .producto3 {
-                    display: none;
-                }
-        }
-        .ofermes {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 0.5fr 1.5fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            grid-template-areas:
-                "titulo2 titulo2 titulo2"
-                /*"producto4 producto5 producto6"*/
-            ;
-            grid-area: ofermes;
-            height: 100px;
-
-            .titulo2 {
-                grid-area: titulo2;
-                height: 100px;
-                background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), $color1);
-                background-position: center;
-                background-size: cover;
-                color: black;
-                font-size: 40px;
-                text-decoration: double;
-                text-transform: uppercase;
-                text-align: center;
-                text-shadow: 25px;
-            }
-        
-            .producto4 {
-                display: none;
-            }
-        
-            .producto5 {
-                display: none;
-            }
-        
-            .producto6 {
-                display: none;
-            }
-        }
-            
-        .flash {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 0.5fr 1.5fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            grid-template-areas:
-                "titulo3 titulo3 titulo3"
-                /*"producto7 producto8 producto9"*/
-            ;
-            grid-area: flash;
-            height: 100px;
-    
-            .titulo3 {
-                grid-area: titulo3;
-                height: 100px;
-                background-image: linear-gradient(to right, rgba(0, 0, 0, 0.849), $color1);
-        
-                background-position: center;
-                background-size: cover;
-                color: black;
-                font-size: 40px;
-                text-decoration: double;
-                text-transform: uppercase;
-                text-align: center;
-                text-shadow: 25px;
-            }
-            .producto7 {
-                display: none;
-            }
-            .producto8 {
-                display: none;
-            }
-            .producto9 {
-                display: none;
-            }
-        }
-    }
-
-    /*!Advertencia: no se porque motivos si está previsto que se vea el pre-footer que sería el footer de la version mobile y que se veria cuando el ancho entrara en el media queries, no se visualiza, no entiendo donde está el problema.*/
-
-    .footer{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas: 
-        "prefooter";
-            .prefooter{
-                grid-area: prefooter;
-                background-color: rgb(238, 84, 13);
-            }
-    }
-
-    .gps {
-        display: none;
-    }
-    .aboutus {
-        display: none;
-    }
-
-    .tutorial {
-        display: none;
-    }
-
-    .googlemaps {
-        display: none;
-    }
-
-    .textaboutus {
-        display: none;
-    }
-
-    .videosyt {
-        display: none;
-    }
-
-    /*VERSION MOBILE DE PRODUCTOS*/
-    .products {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-            /*1fr 1fr*/
-        ;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "area1"
-            "area2"
-            "area3"
-            "area4"
-            "area5"
-            "area6"
-            "area7";
-            /*"area8"
-        "area9"*/
-    }
-
-    .fotis {
-        height: 70%;
-        transition: width 2s, height 2s, transform 2s;
-    
-            .fotis:hover {
-                transform: scale(0.5);
-                background-color: black;
-                opacity: 0.6;
-            }
-    }
-    
-    .taitle {
-        font-size: 30px;
-        text-transform: uppercase;
-        text-decoration: double;
-        border: solid 2px white;
-        text-align: center;
-    }
-
-    .secciones {
-        display: none;
-    }
-
-    .area8 {
-        grid-area: area8;
-        display: none;
-    }
-
-    .area9 {
-        grid-area: area9;
-        display: none;
-    }
+/*PAGINA ACERCA DE NOSOTROS*/
+.nosotros{
+    color: $color1;
 }
+/*boton para subir al principio de pagina*/
+.subir {
+    height: 45px;
+    width: 45px;
+    color: $color4;
+    background-color: $color2;
+    text-align: center;
+    border: 2px solid $color1;
+    position: fixed;
+    right: 15px;
+    bottom: 85px;
+    border-radius: 50%;
+    box-shadow: 25%;
+    
+}
+
+

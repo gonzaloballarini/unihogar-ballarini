@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,7 @@
   <meta name="description"
     content="Sitio web responsive de la empresa Unihogar en la cual vas a poder encontrar toda la linea de blanco y decoración con la que cuenta, beneficios increibles, ubicación de nuestro local, politicas de empresa y formas de contactarse con la misma">
   <meta name="keywords"
-    content="pyme, negocio local, linea blanco, linea hogar, decoracion y hogar, hogar y decoracion, blanco y decoracion, empresa nacional, empresa mendocina, sabanas, toallones, acolchados, frazadas, cortinas">
+    content="pyme,negocio local, linea blanco, linea hogar, decoracion y hogar, hogar y decoracion, blanco y decoracion, empresa nacional, empresa mendocina, sabanas, toallones, acolchados, frazadas, cortinas">
   <meta name="author" content="Gonzalo Ballarini">
   <meta name="title" content="Unihogar - Blanco y Decoracion">
   <meta name="ROBOTS" content="INDEX, FOLLOW">
@@ -24,217 +23,512 @@
   <meta http-equiv="content-language" content="Es">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <title>Unihogar - B&D</title>
+  <title>Unihogar</title>
+  <link rel="shortcut icon" href="./images/iconoempresa.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <link rel="stylesheet" href="./CSS/estilos.css">
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
-
 <body>
-  <!-- Encabezado general para todas las secciones (banner, navbar, busqueda, redes sociales, carrito d compras)-->
-  <div class="unihogar12">
+  <div class="unihogar">
+    <!--El header del proyecto contiene el Menu y un Banner en todas las secciones iguales-->
     <div class="header">
-      <div class="banner"></div>
-      <div class="menu">
-        <!--Menu dropdown extraido de bootstrap-->
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-          <!-- Brand -->
-          <a class="navbar-brand" href="#">Menu</a>
-
-          <!-- Toggler/collapsibe Button -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navbar links -->
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/productos.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/ofertas.html">Ofertas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/tutoriales.html">Tutoriales</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/acercadenosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/contacto.html">Contactanos</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      <!--Botones de Redes Sociales-->
-      <div class="social">
-        <div class="fb">
-          <a href="https://www.facebook.com/uniplast.hogar.5"></a>
-        </div>
-        <div class="ig">
-          <a href="https://www.instagram.com/uniplasthogar/?hl=es"></a>
-        </div>
-        <div class="mp">
-          <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"></a>
-        </div>
-      </div>
-
-      <!-- Recuadro de busqueda extraido de bootstrap-->
-      <div class="search">
-        <div class="ic">
-          <button data-toggle="collapse" data-target="#demo"><img src="./images/lupanegra.jpg" alt="lupanegra"
-              width="100%" height="57px"></button>
-
-          <div id="demo" class="collapse">
-            <form action="get.php">
-              <label for="busqueda"></label>
-              <input type="text" name="Busqueda" id="busqueda"
-                placeholder="Encuentra el producto que estas buscando...">
-            </form>
-          </div>
-          <!--<div class="searchform"></div>-->
-        </div>
-      </div>
-
-      <!-- Recuadro destinado al carrito de compras-->
-      <div class="cart"></div>
-    </div>
-
-
-    <!-- Acá comienza el cuerpo del Index (main)-->
-    <div class="main">
-
-      <!-- Carrusel extraido de Bootstrap -->
-      <div class="carrusel">
-        <div id="demo" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
+      <!--Barra Navegadora de Menu-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Menu Principal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./pages/ofertas.html">Ofertas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Productos  
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./pages/sectoresproductos/bathroom.html">Baño</a>
+                <a class="dropdown-item" href="./pages/sectoresproductos/cocina.html">Cocina</a>
+                <a class="dropdown-item" href="./pages/sectoresproductos/comedor.html">Comedor</a>
+                <a class="dropdown-item" href="./pages/sectoresproductos/dormitorio.html">Dormitorio</a>
+                <a class="dropdown-item" href="./pages/sectoresproductos/jardineriayexterior.html">Jardinería y Exterior</a>
+                <a class="dropdown-item" href="./pages/sectoresproductos/lavanderia.html">Lavandería</a>
+                <a class="dropdown-item" href="./pages/sectoresproductos/living.html">Living</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="./pages/productos.html">Todos los Productos</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link enabled" href="./pages/acercadenosotros.html">Acerca de la Empresa</a>
+            </li>
           </ul>
+          <form class="form-inline my-2 my-lg-0" >
+            <input class="form-control mr-sm-2" type="search" placeholder="Encuentra el producto que estas buscando..." aria-label="Search" size="40">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color:white; border: solid 2px white">Buscar</button>
+          </form>
+          <button type="button" class="btn btn-primary carrito"></button>
+        </div>
+      </nav>
 
-          <!-- The slideshow -->
-          <div class="carousel-inner unihogar">
+      <!--Imagen del Banner-->
+      <div class="banner">
+        <img src="./images/bannerempresawide.jpg" alt="empresalogo"  class="bannerimagen">
+      </div>
+    </div>
+    
+    <!--Cuerpo del Index-->
+    <div class="main">
+      <nav class="categorias">
+        <section class="option-categorias">
+          <a href="./pages/sectoresproductos/dormitorio.html" style="text-decoration:none; color:white">Dormitorio</a>
+        </section>
+        <section class="option-categorias">
+          <a href="./pages/sectoresproductos/bathroom.html" style="text-decoration:none; color:white">Baño</a>
+        </section>
+        <section class="option-categorias"> 
+          <a href="./pages/sectoresproductos/cocina.html" style="text-decoration:none; color:white">Cocina</a>
+        </section>
+        <section class="option-categorias"> 
+          <a href="./pages/sectoresproductos/comedor.html" style="text-decoration:none; color:white">Comedor</a>
+        </section>
+        <section class="option-categorias"> 
+          <a href="./pages/sectoresproductos/living.html" style="text-decoration:none; color:white">Living</a>
+        </section>
+        <section class="option-categorias"> 
+          <a href="./pages/sectoresproductos/lavanderia.html" style="text-decoration:none; color:white">Lavandería</a>
+        </section>
+        <section class="option-categorias"> 
+          <a href="./pages/sectoresproductos/jardineriayexterior.html" style="text-decoration:none; color:white">Jardin y Exterior</a>
+        </section>
+      </nav>
+
+      <!--Carrusel Numero 1 de Ofertas-->
+      <div class="ofermes">
+          <h1 class="ofermes-h1">Ofertas Flash</h1>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!--Primer Slide-->
+              <div class="carousel-item active">
+                <div class="cards-wrapper">
+                  <!--Oferta1-->
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                  <!--Oferta2-->
+                  <div class="card d-none d-md-block">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                  <!--Oferta3-->
+                  <div class="card d-none d-md-block">
+                    <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <!--Oferta4-->
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                  <!--Oferta5-->
+                  <div class="card d-none d-md-block">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                  <!--Oferta6-->
+                  <div class="card d-none d-md-block">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <!--Oferta7-->
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                  <!--Oferta8-->
+                  <div class="card d-none d-md-block">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                  <!--Oferta9-->
+                  <div class="card d-none d-md-block">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+      </div>
+
+      <!--Carrusel Numero 2 de Ofertas-->
+      <div class="ofermes">
+        <h1 class="ofermes-h1">Los mas vendidos</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <!--Oferta1-->
+          <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./images/fondojardin.jpg" alt="jardineria"  height="300px" width="50%">
+              <div class="cards-wrapper">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta2-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta3-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!--Oferta4-->
             <div class="carousel-item">
-              <img src="./images/fondocomedor.jpg" alt="comedor" height="300px" width="50%">
+              <div class="cards-wrapper">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta5-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta6-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!--Oferta7-->
             <div class="carousel-item">
-              <img src="./images/fondoliving.jpg" alt="living" height="300px" width="50%">
+              <div class="cards-wrapper">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta8-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta9-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Left and right controls -->
-          <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
           </a>
-
         </div>
       </div>
 
-      <!-- Navigation bar con el Catalogo o Sectores-->
-      <div class="catalogo">
-        <div class="c1">
-          <a href="./pages/sectoresproductos/dormitorio.html">dormitorio</a>
-        </div>
-        <div class="c1--2">
-          <a href="./pages/sectoresproductos/living.html">living</a>
-        </div>
-        <div class="c1--3">
-          <a href="./pages/sectoresproductos/bathroom.html">baño</a>
-        </div>
-        <div class="c1--4">
-          <a href="./pages/sectoresproductos/cocina.html">cocina</a>
-        </div>
-        <div class="c1--5">
-          <a href="./pages/sectoresproductos/comedor.html">comedor</a>
-        </div>
-        <div class="c1--6">
-          <a href="./pages/sectoresproductos/jardineriayexterior.html">jardineria</a>
-        </div>
-        <div class="c1--7">
-          <a href="./pages/sectoresproductos/lavanderia.html">lavanderia</a>
-        </div>
-      </div>
-
-      <!-- Grid con los productos mas vendidos-->
-      <div class="masvendidos">
-        <div class="titulo1">mas vendidos</div>
-        <div class="producto1"></div>
-        <div class="producto2"></div>
-        <div class="producto3"></div>
-      </div>
-
-      <!-- Grid con las ofertas del mes-->
+      <!--Carrusel Numero 3 de Ofertas-->
       <div class="ofermes">
-        <div class="titulo2">ofertas del mes</div>
-        <div class="producto4"></div>
-        <div class="producto5"></div>
-        <div class="producto6"></div>
-      </div>
-
-      <!-- Grid con los productos de venta por un lapso corto de tiempo-->
-      <div class="flash">
-        <div class="titulo3">ofertas flash</div>
-        <div class="producto7"></div>
-        <div class="producto8"></div>
-        <div class="producto9"></div>
+        <h1 class="ofermes-h1">Ofertas del Mes</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!--Oferta1-->
+            <div class="carousel-item active">
+              <div class="cards-wrapper">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta2-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta3-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Oferta4-->
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta5-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta6-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Oferta7-->
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta8-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <!--Oferta9-->
+                <div class="card d-none d-md-block">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
+  
 
 
-    <!-- Este es el código del Footer que se aplica en general a todas las secciones al igual que el header-->
+    <!--Codigo del Footer-->
     <div class="footer">
-      <div class="prefooter">
-        <div class="fb">
-          <a href="https://www.facebook.com/uniplast.hogar.5"><img src="./images/logofacebookcolor.jpg"
-              alt="facebook" style="height:50%;"></a>
-        </div>
-        <div class="ig">
-          <a href="https://www.instagram.com/uniplasthogar/?hl=es"><img src="./images/logoinstacolor.jpg"
-              alt="instagram"></a>
-        </div>
-        <div class="mp">
-          <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"><img src="./images/logomapscolor.png" alt="googlemaps"></a>
-        </div>
+      <h1 class="footer-h1">seguinos en nuestras redes</h1>
+      <h3>contactanos</h3>
+      <div class="social">
+        <a href="https://instagram.com/uniplasthogar?igshid=YmMyMTA2M2Y=" class="iconoredes">
+          <img src="./images/logoinstacolor.jpg" alt="Instagram" style="max-width:85%; max-height:85%; border-radius: 50%;margin-top: 15px">
+        </a>
+        <a href="https://www.facebook.com/uniplast.hogar.5" class="iconoredes">
+          <img src="./images/logofacebookcolor.jpg" alt="Facebook" style="max-width:85%; max-height:85%; border-radius: 50%;margin-top: 15px">
+        </a>
+        <a href="https://wa.me/+5492615357918" class="iconoredes">
+          <img src="./images/logowassap.png" alt="Google Maps" style="max-width:85%; max-height:85%; border-radius: 50%;margin-top: 15px">
+        </a>
       </div>
-      <div class="gps"> Acercate a nuestro local </div>
-      <div class="aboutus"> Conoce nuestra empresa</div>
-      <div class="tutorial"> Te ayudamos a elegir</div>
-      <div class="googlemaps">
-        <iframe
-          src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.0845846717357!2d-68.80050227196796!3d-32.90842677351797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1648515761389!5m2!1ses-419!2sar"
-          style="border:0; width: 90%; height: 90%; position:relative; top:5%; left: 6%;" allowfullscreen=""
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="textaboutus">
-        <p><strong>Unihogar es una empresa familiar fundada en el año 2019. Si bien la misma data de un tiempo mas o
-            menos corto, se trata de una familia que se encuentra en el rubro del blanco y la decoración desde hace mas
-            de 40 años. <br><br>Algunas de las empresas que fueron creadas en la Provincia de Mendoza, fueron por
-            ejemplo: Atelier, Los 5 Distribuidores, Telar, Telar Blanco y Deco, Uniplast, y ahora quien lleva la bandera
-            y logo familiar es la nueva firma "Unihogar". <br> <br> Porque entendemos que la familia es nuestro pequeño
-            universo, ese universo que elegimos para pasar nuestra vida y que es nuestro compromiso hacerlo mas cómodo y
-            confortable para vivir en armonía.</strong></p>
-      </div>
-      <div class="videosyt">
-        <iframe src="https://www.youtube.com/embed/3wzxnQDgOzc" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen style="width: 90%; height: 90%; position:relative; top: 5%; left: 6%;"></iframe>
+      <div class="subfooter">
+        <div class="foot-a1">
+          <h1>Acerca de la Empresa</h1>
+          <ul style="list-style:none">
+            <li>Institucional</li>
+            <li>Nosotros</li>
+            <li>Personas</li>
+            <li>Campañas</li>
+            <li>La Tierra</li>
+            <li>Ser Parte de Unihogar</li>
+            <li>Materiales</li>
+            <li>Sucursales</li>
+          </ul>
+        </div>
+        <div class="foot-a2">
+          <h1>Asistencia</h1>
+          <ul style="list-style:none">
+            <li>Tutoriales para elegir productos</li>
+            <li>Metodos de Pago</li>
+            <li>Metodos de Envío</li>
+            <li>Politicas de Cambio y Devolución</li>
+            <li>Preguntas Frecuentes</li>
+          </ul>
+        
+        </div>
+        <div class="foot-a3">
+          <h1>Datos de Contacto</h1>
+          <ul style="list-style:none">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="iconosubfooter"><path d="M18.92 351.2l108.5-46.52c12.78-5.531 27.77-1.801 36.45 8.98l44.09 53.82c69.25-34 125.5-90.31 159.5-159.5l-53.81-44.04c-10.75-8.781-14.41-23.69-8.974-36.47l46.51-108.5c6.094-13.91 21.1-21.52 35.79-18.11l100.8 23.25c14.25 3.25 24.22 15.8 24.22 30.46c0 252.3-205.2 457.5-457.5 457.5c-14.67 0-27.18-9.968-30.45-24.22l-23.25-100.8C-2.571 372.4 5.018 357.2 18.92 351.2z"/></svg>
+              <em>4-263051</em>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="iconosubfooter"><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
+              <em>unihogar@gmail.com</em>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="iconosubfooter"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+              <em>Pedro Vargas 3572 - B° Unimev, Guaymallén - Mendoza</em>
+            </li>
+          </ul>
+        </div>
+
+        <div class="foot-a4">
+          <h1>Google Maps</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.96161889871044!2d-68.8007814415396!3d-32.90834799292183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1652592734288!5m2!1ses-419!2sar" style="border:0; width: 100%; height: 75%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
+    <a href="#" class="subir"><img src="./images/arrow-up-solid.svg" alt="flechasubir" width="25px" height="25px" style="margin-top: 8px; opacity: 0.6;"></a>
   </div>
-
-  <a href="#" class="subir"><img src="./images/arrow-up-solid.svg" alt="flechasubir" width="30px" height="30px"></a>
-
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

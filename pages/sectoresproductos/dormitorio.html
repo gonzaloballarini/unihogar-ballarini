@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
   <meta name="description"
     content="Sitio web responsive de la empresa Unihogar en la cual vas a poder encontrar toda la linea de blanco y decoración con la que cuenta, beneficios increibles, ubicación de nuestro local, politicas de empresa y formas de contactarse con la misma">
   <meta name="keywords"
-    content="pyme, negocio local, linea blanco, linea hogar, decoracion y hogar, hogar y decoracion, blanco y decoracion, empresa nacional, empresa mendocina, sabanas, toallones, acolchados, frazadas, cortinas">
+    content="pyme,negocio local, linea blanco, linea hogar, decoracion y hogar, hogar y decoracion, blanco y decoracion, empresa nacional, empresa mendocina, sabanas, toallones, acolchados, frazadas, cortinas">
   <meta name="author" content="Gonzalo Ballarini">
   <meta name="title" content="Unihogar - Blanco y Decoracion">
   <meta name="ROBOTS" content="INDEX, FOLLOW">
@@ -24,240 +25,300 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <title>Unihogar_Seccion-Dormitorio</title>
-  <link rel="shortcut icon" href="../../images/logoempresa.jpeg">
+  <link rel="shortcut icon" href="../images/iconoempresa.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="../../css/estilos.css">
 </head>
+
 <body>
-    <HEADER>
-        <!--Barra de Navegación superior del header--> 
-        <!--<div class="unihogar12">-->
-            <div class="header">
-              <div class="banner"></div>
-              <div class="menu">
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                  <!-- Brand -->
-                  <a class="navbar-brand" href="../../index.html">Menu</a>
-                
-                  <!-- Toggler/collapsibe Button -->
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                
-                  <!-- Navbar links -->
-                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="../productos.html">Productos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../ofertas.html">Ofertas</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../tutoriales.html">Tutoriales</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../acercadenosotros.html">Nosotros</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../contacto.html">Contactanos</a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav> 
+  <div class="unihogar">
+    <!--El header del proyecto contiene el Menu y un Banner en todas las secciones iguales-->
+    <div class="header">
+      <!--Barra Navegadora de Menu-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../index.html">Menu Principal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../ofertas.html">Ofertas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Productos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./bathroom.html">Baño</a>
+                <a class="dropdown-item" href="./cocina.html">Cocina</a>
+                <a class="dropdown-item" href="./comedor.html">Comedor</a>
+                <a class="dropdown-item" href="./dormitorio.html">Dormitorio</a>
+                <a class="dropdown-item" href="./jardineriayexterior.html">Jardinería y Exterior</a>
+                <a class="dropdown-item" href="./lavanderia.html">Lavandería</a>
+                <a class="dropdown-item" href="./living.html">Living</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../productos.html">Todos los Productos</a>
               </div>
-        
-              <div class="social">
-                <div class="fb">
-                  <a href="https://www.facebook.com/uniplast.hogar.5"></a>
-                </div>
-                <div class="ig">
-                  <a href="https://www.instagram.com/uniplasthogar/?hl=es"></a>
-                </div>
-                <div class="mp">
-                  <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"></a>
-                </div>
-              </div>
-              <div class="search">
-                <div class="ic">
-                  <button data-toggle="collapse" data-target="#demo"><img src="../../images/lupanegra.jpg" alt="lupanegra" width="100%"
-                      height="57px"></button>
-              
-                  <div id="demo" class="collapse">
-                    <form action="get.php">
-                      <label for="busqueda"></label>
-                      <input type="text" name="Busqueda" id="busqueda" placeholder="Encuentra el producto que estas buscando...">
-                    </form>
-                  </div>
-                  <!--<div class="searchform"></div>-->
-                </div>
-              </div>
-              <div class="cart"></div>
-            </div>
-        
-        
-        </HEADER>
-        <main>  
-          <div class="produtto">
-            <div class="card1">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">Batas de Algodon</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-              </div>
-            </div>
-            <div class="card2">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card3">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card4">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card5">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card6">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card7">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card8">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card9">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card10">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card11">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
-            </div>
-            <div class="card12">
-              <div class="card" style="width:400px">
-                <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                  <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link enabled" href="../acercadenosotros.html">Acerca de la Empresa</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Encuentra el producto que estas buscando..."
+              aria-label="Search" size="40">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+              style="color:white; border: solid 2px white">Buscar</button>
+          </form>
+          <button type="button" class="btn btn-primary carrito"></button>
+        </div>
+      </nav>
+
+      <!--Imagen del Banner-->
+      <div class="banner">
+        <img src="../../images/bannerempresawide.jpg" alt="empresalogo" class="bannerimagen">
+      </div>
+    </div>
+
+    <!--Cuerpo del Index-->
+    <main>  
+      <div class="produtto">
+
+        <div class="card1">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Batas de Algodon</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
           </div>
-        </main>
-        
-    <a href="../Productos.html#dormitorio"><em>Volver al Catalogo de Productos</em></a><br>
-    <a href="../../index.html"><strong>Volver a Inicio</strong></a>
+        </div>
+
+        <div class="card2">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card3">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card4">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card5">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card6">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card7">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card8">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card9">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card10">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card11">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card12">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="../../images/productos/bata-adulto-400-gr21-5111f844a9df34709316365127104874-1024-1024.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--Codigo del Footer-->
     <div class="footer">
-        <div class="prefooter">
-           <div class="fb">
-              <a href="https://www.facebook.com/uniplast.hogar.5"><img src="./images/logofacebookcolor.jpg" alt="facebook"></a>
-            </div>
-            <div class="ig">
-              <a href="https://www.instagram.com/uniplasthogar/?hl=es"><img src="./images/logoinstacolor.jpg" alt="instagram"></a>
-            </div>
-            <div class="mp">
-              <a href="https://goo.gl/maps/wvn69WRZvUvZ4CRu8"><img src="./images/logomapscolor.png" alt="googlemaps"></a>
-            </div>
+      <h1 class="footer-h1">seguinos en nuestras redes</h1>
+      <h3>contactanos</h3>
+      <div class="social">
+        <a href="https://instagram.com/uniplasthogar?igshid=YmMyMTA2M2Y=" class="iconoredes">
+          <img src="../../images/logoinstacolor.jpg" alt="Instagram"
+            style="max-width:85%; max-height:85%; border-radius: 50%;margin-top: 15px">
+        </a>
+        <a href="https://www.facebook.com/uniplast.hogar.5" class="iconoredes">
+          <img src="../../images/logofacebookcolor.jpg" alt="Facebook"
+            style="max-width:85%; max-height:85%; border-radius: 50%;margin-top: 15px">
+        </a>
+        <a href="https://wa.me/+5492615357918" class="iconoredes">
+          <img src="../../images/logowassap.png" alt="Google Maps"
+            style="max-width:85%; max-height:85%; border-radius: 50%;margin-top: 15px">
+        </a>
+      </div>
+      <div class="subfooter">
+        <div class="foot-a1">
+          <h1>Acerca de la Empresa</h1>
+          <ul style="list-style:none">
+            <li>Institucional</li>
+            <li>Nosotros</li>
+            <li>Personas</li>
+            <li>Campañas</li>
+            <li>La Tierra</li>
+            <li>Ser Parte de Unihogar</li>
+            <li>Materiales</li>
+            <li>Sucursales</li>
+          </ul>
         </div>
-        <div class="gps"> Acercate a nuestro local </div>
-        <div class="aboutus"> Conoce nuestra empresa</div>
-        <div class="tutorial"> Te ayudamos a elegir</div>
-        <div class="googlemaps"> 
-          <iframe src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.0845846717357!2d-68.80050227196796!3d-32.90842677351797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1648515761389!5m2!1ses-419!2sar" style="border:0; width: 90%; height: 90%; position:relative; top:5%; left: 6%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="foot-a2">
+          <h1>Asistencia</h1>
+          <ul style="list-style:none">
+            <li>Tutoriales para elegir productos</li>
+            <li>Metodos de Pago</li>
+            <li>Metodos de Envío</li>
+            <li>Politicas de Cambio y Devolución</li>
+            <li>Preguntas Frecuentes</li>
+          </ul>
+
         </div>
-        <div class="textaboutus"> 
-          <p><strong>Unihogar es una empresa familiar fundada en el año 2019. Si bien la misma data de un tiempo mas o menos corto, se trata de una familia que se encuentra en el rubro del blanco y la decoración desde hace mas de 40 años.  <br><br>Algunas de las empresas que fueron creadas en la Provincia de Mendoza, fueron por ejemplo: Atelier, Los 5 Distribuidores, Telar, Telar Blanco y Deco, Uniplast, y ahora quien lleva la bandera y logo familiar es la nueva firma "Unihogar". <br> <br> Porque entendemos que la familia es nuestro pequeño universo, ese universo que elegimos para pasar nuestra vida y que es nuestro compromiso hacerlo mas cómodo y confortable para vivir en armonía.</strong></p>
+        <div class="foot-a3">
+          <h1>Datos de Contacto</h1>
+          <ul style="list-style:none">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="iconosubfooter">
+                <path
+                  d="M18.92 351.2l108.5-46.52c12.78-5.531 27.77-1.801 36.45 8.98l44.09 53.82c69.25-34 125.5-90.31 159.5-159.5l-53.81-44.04c-10.75-8.781-14.41-23.69-8.974-36.47l46.51-108.5c6.094-13.91 21.1-21.52 35.79-18.11l100.8 23.25c14.25 3.25 24.22 15.8 24.22 30.46c0 252.3-205.2 457.5-457.5 457.5c-14.67 0-27.18-9.968-30.45-24.22l-23.25-100.8C-2.571 372.4 5.018 357.2 18.92 351.2z" />
+              </svg>
+              <em>4-263051</em>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="iconosubfooter">
+                <path
+                  d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
+              </svg>
+              <em>unihogar@gmail.com</em>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="iconosubfooter">
+                <path
+                  d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z" />
+              </svg>
+              <em>Pedro Vargas 3572 - B° Unimev, Guaymallén - Mendoza</em>
+            </li>
+          </ul>
         </div>
-        <div class="videosyt">
-          <iframe src="https://www.youtube.com/embed/3wzxnQDgOzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 90%; height: 90%; position:relative; top: 5%; left: 6%;"></iframe>
+
+        <div class="foot-a4">
+          <h1>Google Maps</h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.96161889871044!2d-68.8007814415396!3d-32.90834799292183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f335751e5ab%3A0x9d3b4a3aed85b00e!2sUNIHOGAR!5e0!3m2!1ses-419!2sar!4v1652592734288!5m2!1ses-419!2sar"
+            style="border:0; width: 100%; height: 75%" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
-  
-  <a href="#" class="subir"><img src="../images/arrow-up-solid.svg" alt="flechasubir" width="30px" height="30px"></a>
-  
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
-  
+    <a href="#" class="subir"><img src="../../images/arrow-up-solid.svg" alt="flechasubir" width="25px" height="25px"
+        style="margin-top: 8px; opacity: 0.6;"></a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
 </body>
 </html>
