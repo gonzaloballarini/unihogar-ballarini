@@ -1,8 +1,14 @@
 $color1: black; 
-$color2: rgba(0, 138, 255, 0.705); 
-$color3: rgba(128, 128, 128, 0.700); 
+$color2: #47A1B3; 
+$color3: #95B0B6; 
 $color4: white; 
+$colorazulverdoso: #324B50;
+$coloryellow: #EEE8A9;
+$colorceleste: #E7FDFF;
+$colorlila: #A28CBB;
+
 $font1:'Bangers', cursive;
+$font2:'Koulen', cursive;
 
 
 *{
@@ -27,6 +33,7 @@ html{
     color: $color4;
         
         .header {
+            
             grid-area: header;
             background-color: $color1;
                 .navbar{
@@ -146,6 +153,7 @@ html{
         }
 
         .footer {
+            
             grid-area: footer;
             background-image: linear-gradient($color3, $color4);
             color: $color1;
@@ -168,6 +176,7 @@ html{
                 display: flex; 
                 justify-content: center;
                 justify-content: space-between;
+                justify-content: space-around;
                 flex-wrap: wrap;
                 .iconosubfooter{
                     max-width: 25px;
@@ -177,166 +186,142 @@ html{
         }
 }
 
-@media (min-width: 769px) {
-    .footer h3 { display: none; 
-        visibility: hidden;
-    }
-}
 
-@media (max-width: 768px) {
-    .unihogar{
-        height: 800px;
-    }
-
-    .categorias {visibility: hidden;}
-
-    .footer-h1 {
-        display: none;
-    }
-    .footer h3 {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 36px;
-        
-    }
-
-    .subfooter{
-        display:flexbox;
-        flex-direction: column;
-        .iconosubfooter{
-            width: 5%;
-            height: 5%;
-        }
-    }
-    
-}
-
-@media (max-width: 500px) {
-
-    .unihogar {
-        width: 100%;
-        height: 500px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-        color: $color4;
-    }
-
-}
 
 /*****ESTILOS DE LA SECCIÓN PRODUCTOS*****/
-.products {
+.productgrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 25px 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
+    gap: 10px 20px;
     grid-auto-flow: row;
     grid-template-areas:
-        "area1 area2 area3"
-        "area4 area5 area6"
-        "area7 area8 area9";
-    background-color: black;
-    font-size: 24px;
-    color: $color2;
+        "bedcard bedcard bathcard bathcard"
+        "bedcard bedcard gardencard gardencard"
+        "livingcard livingcard gardencard gardencard"
+        "livingcard livingcard comedorcard comedorcard"
+        "relleno1 relleno1 comedorcard comedorcard"
+        "cocinacard cocinacard relleno2 relleno2"
+        "cocinacard cocinacard laundrycard laundrycard";
+    aspect-ratio: 1/1;
+    background-image: linear-gradient($color1, $color3);
+    padding: 25px;
+    
+        .bedcard {
+            grid-area: bedcard;
+        }
+    
+        .bathcard {
+            grid-area: bathcard;
+        }
+    
+        .gardencard {
+            grid-area: gardencard;
+        }
+    
+        .livingcard {
+            grid-area: livingcard;
+        }
+    
+        .comedorcard {
+            grid-area: comedorcard;
+        }
+    
+        .cocinacard {
+            grid-area: cocinacard;
+        }
+    
+        .laundrycard {
+            grid-area: laundrycard;
+        }
+    
+        .relleno1 {
+            grid-area: relleno1;
+            background-image: url(../images/stacked-peaks-haikei.svg);
+            border-radius: 2%;
+        }
 
-        .area1 { grid-area: area1; }
-        .area2 { grid-area: area2; }
-        .area3 { grid-area: area3; }
-        .area4 { grid-area: area4; }
-        .area5 { grid-area: area5; }
-        .area6 { grid-area: area6; }
-        .area7 { grid-area: area7; }
-        .area8 { grid-area: area8; }
-        .area9 { grid-area: area9; }
-}
+        .relleno2 {
+            grid-area: relleno2;
+            background-image: url(../images/stacked-peaks-haikei.svg);
+            border-radius: 2%;
+        }
+    
 
-.taitle {
-    font-size: 30px;
-    text-transform: uppercase;
-    text-decoration: double;
-    border: solid 2px $color2;
-}
-
-.fotis {
-    height: 50%;
-    transition: width 2s, height 2s, transform 2s;
-
-    .fotis:hover {
-        transform: scale(0.9);
-        background-color: black;
-        opacity: 0.6;
+    .grip{
+        background-color: $color4;
+        background-size: cover;
+        text-decoration: none; 
+        width: 100%;
+        height: 100%;
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 0 15px 15px 0;
+        border-radius: 2%;
+        object-fit: cover;
+        
+    
+        .a{
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0 15px 15px 0;
+        }
+    
+        .texto{
+            position: absolute;
+            text-align: center;
+            font-family: $font1;
+            color: $coloryellow;
+            display: none;
+            bottom: 0;
+            width: 100%;
+            height: 80%;
+            background-color: rgba(0, 0, 0, 0.6);
+            top: 50%;
+            font-size: 450%;
+            opacity: 0.9;
+        }
+        
+        a:hover .texto{
+            display: block;
+        }
     }
+
+    .grip img{
+        object-fit: cover;
+    }
+
 }
+
+
+
+
+
 
 
 
 
 /*GRID Y ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*/
-.produtto {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 25px 2px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "card1 card2 card3 card4"
-        "card5 card6 card7 card8"
-        "card9 card10 card11 card12";
-    background-color: black;
-}
 
-.card1 {
-    grid-area: card1;
-}
 
-.card2 {
-    grid-area: card2;
-}
+.produtto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 15px; 
+} 
 
-.card3 {
-    grid-area: card3;
-}
-
-.card4 {
-    grid-area: card4;
-}
-
-.card5 {
-    grid-area: card5;
-}
-
-.card6 {
-    grid-area: card6;
-}
-
-.card7 {
-    grid-area: card7;
-}
-
-.card8 {
-    grid-area: card8;
-}
-
-.card9 {
-    grid-area: card9;
-}
-
-.card10 {
-    grid-area: card10;
-}
-
-.card11 {
-    grid-area: card11;
-}
-
-.card12 {
-    grid-area: card12;
+.card{
+    margin:15px; 
+    background-color: $color1;
+    width: 400px;
 }
 
 /***PAGINA TUTORIALES***/
@@ -368,10 +353,25 @@ $tutorial: (
     }
 }
 
+
 /*PAGINA ACERCA DE NOSOTROS*/
-.nosotros{
+.cosanostra{
     color: $color1;
+    h1{
+        text-align: center;
+    }
 }
+.nosotros-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    
+}
+
+
+
+
 /*boton para subir al principio de pagina*/
 .subir {
     height: 45px;
@@ -388,4 +388,97 @@ $tutorial: (
     
 }
 
+@media (max-width:1320px) {
+    .unihogar{
+        height: 800px;
+    }
 
+    
+    .carta{
+        width: 100%;
+        margin-left: -2%;
+    }
+    .card{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4/1;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .productgrid {
+        display: flex;
+        flex-wrap: wrap;
+
+        .grip{
+            height: 40%;
+        }
+        .relleno1{
+            display: none;
+        }
+        .relleno2{
+            display: none;
+        }
+    }
+}
+@media (min-width: 769px) {
+    .footer h3 { display: none; 
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .unihogar{
+        height: 800px;
+    }
+
+    .categorias {visibility: hidden;}
+
+    .footer-h1 {
+        display: none;
+    }
+    .footer h3 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 36px;
+        
+    }
+
+    .subfooter{
+        display:flexbox;
+        flex-direction: column;
+        .iconosubfooter{
+            width: 5%;
+            height: 5%;
+        }
+    }
+
+    .nosotros-card{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        img{
+            width: 100% !important;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .unihogar {
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        color: $color4;
+    }
+}
