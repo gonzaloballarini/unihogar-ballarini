@@ -9,6 +9,7 @@ html {
 }
 
 .unihogar {
+  max-height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -75,6 +76,7 @@ html {
   grid-area: main;
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
   background-image: linear-gradient(black, white);
+  /*En esta parte tengo tres problemas: El primero es que no puedo hacer que el overflow del texto me ayude a conservar el tamaño de las tarjetas. En segundo lugar no puedo agrandar el espacio que está destinado a la imagen. En tercer lugar no puedo achicar el espacio destinado al carrusel, es decir entre el banner y la tarjeta hay mucho espacio muerto.*/
 }
 
 .unihogar .main .categorias {
@@ -147,6 +149,13 @@ html {
           box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
   border-radius: 0;
+}
+
+.unihogar .main .card-text {
+  text-align: justify;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
 }
 
 .unihogar .main .carousel-inner {
@@ -357,7 +366,7 @@ html {
      object-fit: cover;
 }
 
-/*GRID Y ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*/
+/*ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*/
 .produtto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +395,12 @@ html {
   width: 400px;
 }
 
+/**SECCION BAÑO**/
 /***PAGINA TUTORIALES***/
+.tutorialesmain {
+  color: black;
+}
+
 .video-tut1 {
   background-color: grey;
   height: 150px;
@@ -510,10 +524,32 @@ html {
 /*PAGINA ACERCA DE NOSOTROS*/
 .cosanostra {
   color: black;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#95B0B6), color-stop(white), to(#95B0B6));
+  background-image: linear-gradient(#95B0B6, white, #95B0B6);
 }
 
 .cosanostra h1 {
   text-align: center;
+  font-family: "Bangers", cursive;
+  font-size: 100px;
+}
+
+.cosanostra h2 {
+  text-align: center;
+  font-family: "Bangers", cursive;
+  font-size: 100px;
+}
+
+.cosanostra p {
+  text-align: justify;
+  overflow: auto;
+  font-size: 18px;
+  font-weight: 700;
+  height: 100%;
+  padding: 25px;
+  text-transform: uppercase;
 }
 
 .nosotros-card {
@@ -527,7 +563,8 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px;
+  margin: 10px;
+  padding: 5px;
 }
 
 /*boton para subir al principio de pagina*/
@@ -558,6 +595,24 @@ html {
     width: 100%;
     height: 100%;
     aspect-ratio: 4/1;
+  }
+  .nosotros-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px;
+  }
+  .nosotros-card img {
+    width: 100% !important;
   }
 }
 
