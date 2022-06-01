@@ -398,127 +398,53 @@ html {
 /**SECCION BAÑO**/
 /***PAGINA TUTORIALES***/
 .tutorialesmain {
-  color: black;
+  color: white;
+  background-image: url(../images/fondotutorial.jpg);
+  background-size: cover;
 }
 
-.video-tut1 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 20px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 20px;
+.tutorialesmain #accordion {
+  color: white;
+  font-family: "Bangers", cursive;
+  max-height: 100%;
 }
 
-.video-tut2 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 30px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 30px;
+.tutorialesmain #accordion .card {
+  width: 95%;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.video-tut3 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
+.tutorialesmain #accordion .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -o-object-position: center;
+     object-position: center;
   text-align: center;
-  font-size: 40px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.video-tut4 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 50px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 50px;
+.tutorialesmain #accordion .card-body p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5em;
 }
 
-.video-tut5 {
-  background-color: grey;
-  height: 150px;
+.tutorialesmain #accordion img {
+  position: relative;
   width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 60px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 60px;
-}
-
-.video-tut6 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 70px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 70px;
-}
-
-.video-tut7 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 75px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 75px;
-}
-
-.video-tut8 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 80px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 80px;
-}
-
-.video-tut9 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 85px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 85px;
-}
-
-.video-tut10 {
-  background-color: grey;
-  height: 150px;
-  width: 100%;
-  border: solid black 2px;
-  text-align: center;
-  font-size: 90px;
-  color: red;
-  text-transform: uppercase;
-  border-radius: 90px;
 }
 
 /*PAGINA ACERCA DE NOSOTROS*/
@@ -565,6 +491,58 @@ html {
           justify-content: space-between;
   margin: 10px;
   padding: 5px;
+}
+
+/*PAGINA OFERTAS.HTML*/
+.ofertasmain {
+  color: black;
+  font-family: "Bangers", cursive;
+  text-align: center;
+  max-height: 100%;
+  margin: 5px;
+}
+
+.ofertasmain .carousel {
+  width: 100%;
+  color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(black), to(white));
+  background-image: linear-gradient(white, black, white);
+}
+
+.ofertasmain .carousel .carousel-item img {
+  width: 65%;
+  max-height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 16/9;
+}
+
+.ofertasmain .carousel .carousel-indicators li {
+  height: 20px;
+  background-color: #A28CBB;
+  opacity: 1.5;
+}
+
+/*PAGINA DE CONTACTO*/
+.bodycontacto {
+  color: black;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: url(../images/fondocontacto.jpg);
+  background-size: auto;
+  opacity: 0.8;
+}
+
+.formulariocontacto {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  color: black;
+  width: 50vh;
+  height: auto;
+  font-size: 30px;
+  position: relative;
 }
 
 /*boton para subir al principio de pagina*/
@@ -681,6 +659,11 @@ html {
   }
   .nosotros-card img {
     width: 100% !important;
+  }
+  .carousel-indicators li {
+    height: 5px;
+    background-color: #A28CBB;
+    opacity: 1.5;
   }
 }
 

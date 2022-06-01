@@ -309,7 +309,6 @@ html{
 
 /*ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*/
 
-
 .produtto{
     display: flex;
     flex-direction: row;
@@ -331,35 +330,46 @@ html{
 
 /***PAGINA TUTORIALES***/
 .tutorialesmain{
-    color: $color1;
-}
-$tutorial: (
-    tut1: 20px,
-    tut2: 30px, 
-    tut3: 40px,
-    tut4: 50px,
-    tut5: 60px, 
-    tut6: 70px, 
-    tut7: 75px, 
-    tut8: 80px, 
-    tut9: 85px, 
-    tut10: 90px
-); 
+    color: $color4;
+    background-image: url(../images/fondotutorial.jpg);
+    background-size: cover;
+    
+    #accordion{
+        color: $color4;
+        font-family: $font1;
+        max-height: 100%;
 
+        .card{
+            width: 95%;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.4);
+            
 
-@each $tut, $font in $tutorial {
-    .video-#{$tut} {
-        background-color: grey;
-        height: 150px;
-        width: 100%;
-        border: solid black 2px;
-        text-align: center;
-        font-size: $font;
-        color: red;
-        text-transform: uppercase;
-        border-radius: $font;
+        }
+
+        .card-body{
+            display: flex; 
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            justify-content: space-around;
+            object-position: center;
+            text-align: center;
+            object-fit: contain;
+
+            p{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.5em;
+            }
+        }
+
+        img{
+            position: relative;
+            width: 100%;
+        }
     }
 }
+
 
 
 /*PAGINA ACERCA DE NOSOTROS*/
@@ -402,6 +412,59 @@ $tutorial: (
     
 }
 
+/*PAGINA OFERTAS.HTML*/
+.ofertasmain{
+    color: $color1;
+    font-family: $font1;
+    text-align: center;
+    max-height: 100%;
+    margin: 5px;
+
+        .carousel{
+            width: 100%;
+            color: $color1;
+            background-image: linear-gradient($color4,$color1,$color4);
+            
+            
+            .carousel-item{
+                img{
+                    width: 65%;
+                    max-height: 50%;
+                    object-fit: contain;
+                    aspect-ratio: 16/9;
+                }
+            }
+
+            .carousel-indicators{
+                li{
+                    height: 20px;
+                    background-color: $colorlila;
+                    opacity: 1.5;
+                }
+            }
+        }
+}
+
+/*PAGINA DE CONTACTO*/
+.bodycontacto{
+    color: $color1;
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url(../images/fondocontacto.jpg);
+    background-size: auto;
+    opacity: 0.8;
+
+}
+.formulariocontacto{
+    align-items: center;
+    vertical-align: middle;
+    color: $color1;
+    width: 50vh;
+    height: auto;
+    font-size: 30px;
+    position: relative;
+    
+}
 
 
 
@@ -505,6 +568,14 @@ $tutorial: (
         flex-wrap: wrap;
         img{
             width: 100% !important;
+        }
+    }
+
+    .carousel-indicators{
+        li{
+            height: 5px;
+            background-color: $colorlila;
+            opacity: 1.5;
         }
     }
 }
