@@ -525,24 +525,50 @@ html {
 
 /*PAGINA DE CONTACTO*/
 .bodycontacto {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 1fr 0.5fr;
+      grid-template-columns: 0.5fr 1fr 0.5fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: "area51 formarea area52";
   color: black;
-  max-width: 100%;
-  max-height: 100%;
-  background-image: url(../images/fondocontacto.jpg);
-  background-size: auto;
-  opacity: 0.8;
+  margin: 2px;
+  background-image: url(../images/wood-1845389_1280.jpg);
+  background-size: fill;
 }
 
-.formulariocontacto {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  vertical-align: middle;
-  color: black;
-  width: 50vh;
-  height: auto;
-  font-size: 30px;
-  position: relative;
+.area51 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area51;
+}
+
+.formarea {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: formarea;
+  background-image: url(../images/wood-1845389_1280.jpg), opacity=0.5;
+  background-size: cover;
+  aspect-ratio: 16/9;
+  display: inline-block;
+  text-align: center;
+}
+
+.formarea form {
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2em;
+  color: #E7FDFF;
+  font-weight: 800;
+}
+
+.area52 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: area52;
 }
 
 /*boton para subir al principio de pagina*/
