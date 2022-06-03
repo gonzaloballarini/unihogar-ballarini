@@ -316,7 +316,7 @@ html{
     align-items: center;
     justify-content: center;
     justify-content: space-between;
-    margin: 15px; 
+    background-image: linear-gradient($color3,$color4,$color2);
 } 
 
 .card{
@@ -325,7 +325,6 @@ html{
     width: 400px;
 }
 
-/**SECCION BAÑO**/
 
 
 /***PAGINA TUTORIALES***/
@@ -455,9 +454,10 @@ html{
     grid-template-areas:
         "area51 formarea area52";
     color: $color1;
-    margin: 2px;
-    background-image: url(../images/wood-1845389_1280.jpg);
-    background-size: fill;
+    background-image: url(../images/touch-screen-1023966_1920.jpg);
+    background-size: cover;
+    aspect-ratio: 2/1;
+    
 }
 
 
@@ -467,18 +467,20 @@ html{
 
 .formarea {
     grid-area: formarea;
-    background-image: url(../images/wood-1845389_1280.jpg), opacity=0.5;
-    background-size: cover;
+    /*background-image: url(../images/low-poly-grid-haikei.svg);
+    background-size: contain*/;
     aspect-ratio: 16/9;
     display: inline-block;
     text-align: center;
+    margin: 15px;
     
     form{
+        
         width:100%;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 2em;
         color: $colorceleste;
-        font-weight: 800;
+        font-weight: 700;
     }
 }
 
