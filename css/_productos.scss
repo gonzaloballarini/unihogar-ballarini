@@ -1,0 +1,25 @@
+/*****ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*****/
+
+.produtto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    background-image: linear-gradient($color3,$color4,$color2);
+} 
+
+.card{
+    margin:15px; 
+    background-color: $color1;
+    width: 400px;
+}
+
+@media (max-width:1320px) {
+    
+    .carta{
+        width: 100%;
+        margin-left: -2%;
+    }
+}

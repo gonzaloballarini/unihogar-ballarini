@@ -76,7 +76,6 @@ html {
   grid-area: main;
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
   background-image: linear-gradient(black, white);
-  /*En esta parte tengo tres problemas: El primero es que no puedo hacer que el overflow del texto me ayude a conservar el tamaño de las tarjetas. En segundo lugar no puedo agrandar el espacio que está destinado a la imagen. En tercer lugar no puedo achicar el espacio destinado al carrusel, es decir entre el banner y la tarjeta hay mucho espacio muerto.*/
 }
 
 .unihogar .main .categorias {
@@ -229,7 +228,100 @@ html {
   max-height: 25px;
 }
 
-/*****ESTILOS DE LA SECCIÓN PRODUCTOS*****/
+/*boton para subir al principio de pagina*/
+.subir {
+  height: 45px;
+  width: 45px;
+  color: white;
+  background-color: #47A1B3;
+  text-align: center;
+  border: 2px solid black;
+  position: fixed;
+  right: 15px;
+  bottom: 85px;
+  border-radius: 50%;
+  -webkit-box-shadow: 25%;
+          box-shadow: 25%;
+}
+
+@media (max-width: 1320px) {
+  .unihogar {
+    height: 800px;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/1;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer h3 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .unihogar {
+    height: 800px;
+  }
+  .main {
+    height: 100vh;
+    width: 100vh;
+  }
+  .main .ofermes {
+    height: 100vh;
+    width: 100vh;
+  }
+  .categorias {
+    visibility: hidden;
+    display: none;
+  }
+  .footer-h1 {
+    display: none;
+  }
+  .footer h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+  }
+  .subfooter {
+    display: flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .subfooter .iconosubfooter {
+    width: 5%;
+    height: 5%;
+  }
+  .carousel-indicators li {
+    height: 5px;
+    background-color: #A28CBB;
+    opacity: 1.5;
+  }
+}
+
+@media (max-width: 500px) {
+  .unihogar {
+    width: 100%;
+    height: 500px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+        grid-template-areas: "header" "main" "footer";
+    color: white;
+  }
+}
+
+/*****SECCIÓN PRODUCTOS.HTML*****/
 .productgrid {
   display: -ms-grid;
   display: grid;
@@ -366,40 +458,11 @@ html {
      object-fit: cover;
 }
 
-/*ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*/
-.produtto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#95B0B6), color-stop(white), to(#47A1B3));
-  background-image: linear-gradient(#95B0B6, white, #47A1B3);
-}
-
-.card {
-  margin: 15px;
-  background-color: black;
-  width: 400px;
-}
-
-/***PAGINA TUTORIALES***/
+/*****SECCION TUTORIALES.HTML*****/
 .tutorialesmain {
   color: white;
-  background-image: url(../images/fondotutorial.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#95B0B6), color-stop(white), color-stop(#47A1B3), to(white));
+  background-image: linear-gradient(#95B0B6, white, #47A1B3, white);
   background-size: cover;
 }
 
@@ -447,7 +510,7 @@ html {
   width: 100%;
 }
 
-/*PAGINA ACERCA DE NOSOTROS*/
+/*****SECCIÓN ACERCADENOSOTROS.HTML*****/
 .cosanostra {
   color: black;
   max-width: 100%;
@@ -459,19 +522,17 @@ html {
 .cosanostra h1 {
   text-align: center;
   font-family: "Bangers", cursive;
-  font-size: 100px;
 }
 
 .cosanostra h2 {
   text-align: center;
   font-family: "Bangers", cursive;
-  font-size: 100px;
 }
 
 .cosanostra p {
   text-align: justify;
   overflow: auto;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   height: 100%;
   padding: 25px;
@@ -493,7 +554,7 @@ html {
   padding: 5px;
 }
 
-/*PAGINA OFERTAS.HTML*/
+/*****SECCION OFERTAS.HTML*****/
 .ofertasmain {
   color: black;
   font-family: "Bangers", cursive;
@@ -523,7 +584,7 @@ html {
   opacity: 1.5;
 }
 
-/*PAGINA DE CONTACTO*/
+/*****SECCION CONTACTO.HTML*****/
 .bodycontacto {
   display: -ms-grid;
   display: grid;
@@ -535,7 +596,8 @@ html {
   grid-auto-flow: row;
       grid-template-areas: "area51 formarea area52";
   color: black;
-  background-image: url(../images/touch-screen-1023966_1920.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#95B0B6), color-stop(#47A1B3), to(white));
+  background-image: linear-gradient(#95B0B6, #47A1B3, white);
   background-size: cover;
   aspect-ratio: 2/1;
 }
@@ -550,8 +612,6 @@ html {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: formarea;
-  /*background-image: url(../images/low-poly-grid-haikei.svg);
-    background-size: contain*/
   aspect-ratio: 16/9;
   display: inline-block;
   text-align: center;
@@ -570,55 +630,6 @@ html {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: area52;
-}
-
-/*boton para subir al principio de pagina*/
-.subir {
-  height: 45px;
-  width: 45px;
-  color: white;
-  background-color: #47A1B3;
-  text-align: center;
-  border: 2px solid black;
-  position: fixed;
-  right: 15px;
-  bottom: 85px;
-  border-radius: 50%;
-  -webkit-box-shadow: 25%;
-          box-shadow: 25%;
-}
-
-@media (max-width: 1320px) {
-  .unihogar {
-    height: 800px;
-  }
-  .carta {
-    width: 100%;
-    margin-left: -2%;
-  }
-  .card {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 4/1;
-  }
-  .nosotros-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 20px;
-  }
-  .nosotros-card img {
-    width: 100% !important;
-  }
 }
 
 @media (max-width: 992px) {
@@ -640,39 +651,28 @@ html {
   }
 }
 
-@media (min-width: 769px) {
-  .footer h3 {
-    display: none;
-    visibility: hidden;
+@media (max-width: 1320px) {
+  .nosotros-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px;
+  }
+  .nosotros-card img {
+    width: 100% !important;
   }
 }
 
 @media (max-width: 768px) {
-  .unihogar {
-    height: 800px;
-  }
-  .categorias {
-    visibility: hidden;
-  }
-  .footer-h1 {
-    display: none;
-  }
-  .footer h3 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 36px;
-  }
-  .subfooter {
-    display: flexbox;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .subfooter .iconosubfooter {
-    width: 5%;
-    height: 5%;
-  }
   .nosotros-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -687,27 +687,42 @@ html {
   .nosotros-card img {
     width: 100% !important;
   }
-  .carousel-indicators li {
-    height: 5px;
-    background-color: #A28CBB;
-    opacity: 1.5;
-  }
 }
 
-@media (max-width: 500px) {
-  .unihogar {
+/*****ESTILOS DE LAS SECCIONES - CARPETA "SECTORESPRODUCTOS"*****/
+.produtto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#95B0B6), color-stop(white), to(#47A1B3));
+  background-image: linear-gradient(#95B0B6, white, #47A1B3);
+}
+
+.card {
+  margin: 15px;
+  background-color: black;
+  width: 400px;
+}
+
+@media (max-width: 1320px) {
+  .carta {
     width: 100%;
-    height: 500px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 0.5fr 0.5fr 0.5fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-        grid-template-areas: "header" "main" "footer";
-    color: white;
+    margin-left: -2%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
