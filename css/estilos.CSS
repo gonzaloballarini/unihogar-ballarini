@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 * {
   margin: 0px;
   padding: 0px;
@@ -14,14 +13,12 @@ html {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: 0.5fr 2fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 0.5fr;
+      grid-template-rows: 0.5fr 2fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "header"
-    "main"
-    "footer";
+      grid-template-areas: "header" "main" "footer";
   color: white;
 }
 
@@ -53,7 +50,7 @@ html {
   background-image: url(../images/carronegreo.png);
   background-size: contain;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -87,16 +84,16 @@ html {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px;
   margin: 10px;
   text-transform: uppercase;
@@ -114,7 +111,7 @@ html {
 
 .unihogar .main .categorias .option-categorias:hover {
   -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+          transform: scale(1.2);
   background-color: #47A1B3;
   border-radius: 15%;
 }
@@ -132,8 +129,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .unihogar .main .card img {
@@ -144,7 +141,7 @@ html {
 .unihogar .main .card {
   margin: 0 0.5em;
   -webkit-box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+          box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
   border-radius: 0;
 }
@@ -152,7 +149,7 @@ html {
 .unihogar .main .card-text {
   text-align: justify;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   overflow: auto;
 }
 
@@ -168,7 +165,7 @@ html {
   border-radius: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
@@ -195,8 +192,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 120px;
 }
@@ -211,15 +208,15 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .unihogar .footer .subfooter .iconosubfooter {
@@ -240,7 +237,7 @@ html {
   bottom: 85px;
   border-radius: 50%;
   -webkit-box-shadow: 25%;
-  box-shadow: 25%;
+          box-shadow: 25%;
 }
 
 @media (max-width: 1320px) {
@@ -250,11 +247,9 @@ html {
     margin: 0px;
     border: 0px;
   }
-
   .main .ofermes {
     max-width: 100vmax;
   }
-
   .card {
     width: 100%;
     height: 100%;
@@ -273,34 +268,28 @@ html {
   .unihogar .main .categorias {
     display: none;
   }
-
   .unihogar .social {
     max-height: 10vh;
   }
-
   .unihogar .footer-h1 {
     display: none;
   }
-
   .unihogar .footer h3 {
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
   }
-
   .unihogar .subfooter {
     display: flexbox;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   .unihogar .subfooter .iconosubfooter {
     width: 5%;
     height: 5%;
   }
-
   .unihogar .carousel-indicators li {
     height: 5px;
     background-color: #A28CBB;
@@ -315,19 +304,15 @@ html {
     margin: 0px;
     border: 0px;
   }
-
   .unihogar .main .categorias {
     display: none;
   }
-
   .unihogar .main .ofermes {
     max-width: 100%;
   }
-
   .unihogar .main .ofermes .carousel .card-text {
     display: none;
   }
-
   .unihogar .main .ofermes .ofermes-h1 {
     font-size: 3rem;
   }
@@ -339,7 +324,6 @@ html {
     max-width: 100%, -moz-fit-content;
     max-width: 100%, fit-content;
   }
-
   .unihogar .main {
     width: 100%, -webkit-fit-content;
     width: 100%, -moz-fit-content;
@@ -348,19 +332,15 @@ html {
     margin: 0px;
     border: 0px;
   }
-
   .unihogar .main .categorias {
     display: none;
   }
-
   .unihogar .main .ofermes {
     width: 45vmax;
   }
-
   .unihogar .main .ofermes .carousel .card-text {
     display: none;
   }
-
   .unihogar .main .ofermes .ofermes-h1 {
     font-size: 3rem;
   }
@@ -371,18 +351,12 @@ html {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
   gap: 10px 20px;
   grid-auto-flow: row;
-  grid-template-areas: "bedcard bedcard bathcard bathcard"
-    "bedcard bedcard gardencard gardencard"
-    "livingcard livingcard gardencard gardencard"
-    "livingcard livingcard comedorcard comedorcard"
-    "relleno1 relleno1 comedorcard comedorcard"
-    "cocinacard cocinacard relleno2 relleno2"
-    "cocinacard cocinacard laundrycard laundrycard";
+      grid-template-areas: "bedcard bedcard bathcard bathcard" "bedcard bedcard gardencard gardencard" "livingcard livingcard gardencard gardencard" "livingcard livingcard comedorcard comedorcard" "relleno1 relleno1 comedorcard comedorcard" "cocinacard cocinacard relleno2 relleno2" "cocinacard cocinacard laundrycard laundrycard";
   aspect-ratio: 1/1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#95B0B6));
   background-image: linear-gradient(black, #95B0B6);
@@ -473,7 +447,7 @@ html {
   margin: 0 15px 15px 0;
   border-radius: 2%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .productgrid .grip .a {
@@ -506,7 +480,7 @@ html {
 
 .productgrid .grip img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 /*****SECCION TUTORIALES.HTML*****/
@@ -535,20 +509,20 @@ html {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
+      flex-flow: row wrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
   text-align: center;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .tutorialesmain #accordion .card-body p {
@@ -596,11 +570,11 @@ html {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 10px;
   padding: 5px;
 }
@@ -625,7 +599,7 @@ html {
   width: 65%;
   max-height: 50%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   aspect-ratio: 16/9;
 }
 
@@ -640,12 +614,12 @@ html {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.5fr 1fr 0.5fr;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
+      grid-template-columns: 0.5fr 1fr 0.5fr;
   -ms-grid-rows: 1fr;
-  grid-template-rows: 1fr;
+      grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "area51 formarea area52";
+      grid-template-areas: "area51 formarea area52";
   color: black;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#95B0B6), color-stop(#47A1B3), to(white));
   background-image: linear-gradient(#95B0B6, #47A1B3, white);
@@ -684,7 +658,6 @@ html {
 }
 
 @media (max-width: 1320px) {
-
   /*MEDIA QUERIES DE LA PAGINA ACERCA DE NOSOTROS.HTML*/
   .nosotros-card {
     display: -webkit-box;
@@ -692,61 +665,52 @@ html {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 20px;
   }
-
   .nosotros-card img {
     width: 100% !important;
   }
-
   /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
   .formarea {
     width: 100%;
   }
-
   .formarea form {
     max-width: 100vmax;
     font-size: 150%;
   }
-
   .formarea form textarea {
     font-size: 100%;
   }
 }
 
 @media (max-width: 992px) {
-
   /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
   .productgrid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-
   .productgrid .grip {
     height: 40%;
   }
-
   .productgrid .relleno1 {
     display: none;
   }
-
   .productgrid .relleno2 {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-
   /*MEDIA QUERIES DE LA PAGINA ACERCA DE NOSOTROS.HTML*/
   .nosotros-card {
     display: -webkit-box;
@@ -754,28 +718,24 @@ html {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-
   .nosotros-card img {
     width: 100% !important;
   }
-
   /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
   .texto {
     font-size: 3.8em !important;
     display: block !important;
     opacity: 0.8 !important;
   }
-
   /*MEDIA QUERIES DE LA PAGINA ACERCADENOSOTROS.HTML*/
   .cosanostra p {
     font-size: 1em;
   }
-
   /*MEDIA QUERIES DE TUTORIALES.HTML*/
   .tutorialesmain {
     width: 91.3vmax;
@@ -783,21 +743,17 @@ html {
 }
 
 @media (max-width: 550px) {
-
   /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
   .formarea {
     width: 100%;
   }
-
   .formarea form {
     max-width: 100vmax;
     font-size: 100%;
   }
-
   .formarea form textarea {
     font-size: 100%;
   }
-
   /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
   .texto {
     font-size: 3.5em !important;
@@ -805,42 +761,34 @@ html {
 }
 
 @media (max-width: 413px) {
-
   /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
   .formarea {
     width: 41.8vmax;
   }
-
   .formarea form {
     max-width: 100vmax;
     font-size: 100%;
   }
-
   .formarea form textarea {
     font-size: 100%;
   }
-
   /*MEDIA QUERIES DE LA PAGINA OFERTAS.HTML*/
   .unihogar {
     max-width: 100vmax;
   }
-
   .unihogar .header {
     max-width: 100%, -webkit-fit-content;
     max-width: 100%, -moz-fit-content;
     max-width: 100%, fit-content;
   }
-
   /*MEDIA QUERIES DE LA PAGINA ACERCADENOSOTROS.HTML*/
   .cosanostra p {
     font-size: 0.8em;
   }
-
   /*MEDIA QUERIES DE PRODUCTOS.HTML*/
   .texto {
     font-size: 3em !important;
   }
-
   /*MEDIA QUERIES DE TUTORIALES.HTML*/
   .tutorialesmain {
     width: 45vmax;
@@ -854,19 +802,19 @@ html {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#95B0B6), color-stop(white), to(#47A1B3));
   background-image: linear-gradient(#95B0B6, white, #47A1B3);
 }
@@ -911,16 +859,15 @@ html {
     aspect-ratio: 3/1;
     padding: 5px;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .carta {
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+        justify-content: space-around;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -932,10 +879,8 @@ html {
     aspect-ratio: 3/1;
     padding: 0px;
   }
-
   .produtto .card-text {
     display: none;
   }
 }
-
 /*# sourceMappingURL=estilos.css.map */
