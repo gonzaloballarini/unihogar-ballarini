@@ -66,7 +66,7 @@ html {
 
 .unihogar .header .bannerimagen {
   width: 100%;
-  max-height: 100%;
+  max-height: 90%;
   aspect-ratio: 1200/475;
 }
 
@@ -122,10 +122,6 @@ html {
   text-align: center;
   font-family: "Bangers", cursive;
   font-size: 70px;
-}
-
-.unihogar .main .carousel-item {
-  height: 450px;
 }
 
 .unihogar .main .cards-wrapper {
@@ -245,8 +241,14 @@ html {
 }
 
 @media (max-width: 1320px) {
-  .unihogar {
-    height: 800px;
+  .unihogar .main {
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+  }
+  .unihogar .main .ofermes {
+    max-width: 100vmax;
   }
   .card {
     width: 100%;
@@ -263,19 +265,7 @@ html {
 }
 
 @media (max-width: 768px) {
-  .unihogar {
-    height: 800px;
-  }
-  .main {
-    height: 100vh;
-    width: 100vh;
-  }
-  .main .ofermes {
-    height: 100vh;
-    width: 100vh;
-  }
-  .categorias {
-    visibility: hidden;
+  .unihogar .main .categorias {
     display: none;
   }
   .footer-h1 {
@@ -304,20 +294,55 @@ html {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+  .unihogar .main {
+    max-width: 100vmax;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+  }
+  .unihogar .main .categorias {
+    display: none;
+  }
+  .unihogar .main .ofermes {
+    max-width: 100%;
+  }
+  .unihogar .main .ofermes .carousel .card-text {
+    display: none;
+  }
+  .unihogar .main .ofermes .ofermes-h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 413px) {
   .unihogar {
-    width: 100%;
-    height: 500px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 0.5fr 0.5fr 0.5fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-        grid-template-areas: "header" "main" "footer";
-    color: white;
+    max-width: 0vmax;
+  }
+  .unihogar .header {
+    max-width: 100%, -webkit-fit-content;
+    max-width: 100%, -moz-fit-content;
+    max-width: 100%, fit-content;
+  }
+  .unihogar .main {
+    width: 100%, -webkit-fit-content;
+    width: 100%, -moz-fit-content;
+    width: 100%, fit-content;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+  }
+  .unihogar .main .categorias {
+    display: none;
+  }
+  .unihogar .main .ofermes {
+    width: 45vmax;
+  }
+  .unihogar .main .ofermes .carousel .card-text {
+    display: none;
+  }
+  .unihogar .main .ofermes .ofermes-h1 {
+    font-size: 3rem;
   }
 }
 
