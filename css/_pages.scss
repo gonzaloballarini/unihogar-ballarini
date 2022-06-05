@@ -227,23 +227,10 @@
     grid-area: area52;
 }
 
-@media (max-width: 992px) {
-    .productgrid {
-        display: flex;
-        flex-wrap: wrap;
-        .grip {
-            height: 40%;
-        }
-        .relleno1 {
-            display: none;
-        }
-        .relleno2 {
-            display: none;
-        }
-    }
-}
+
 
 @media (max-width:1320px) {
+    /*MEDIA QUERIES DE LA PAGINA ACERCA DE NOSOTROS.HTML*/
     .nosotros-card {
         display: flex;
         flex-direction: row;
@@ -254,9 +241,38 @@
             width: 100% !important;
         }
     }
+    /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
+    .formarea {
+        width: 100%;
+        form {
+            max-width: 100vmax;
+            font-size: 150%;
+            textarea{
+                font-size: 100%;
+            }
+        }
+    }
 }
 
+    @media (max-width: 992px) {
+        /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
+        .productgrid {
+            display: flex;
+            flex-wrap: wrap;
+            .grip {
+                height: 40%;
+            }
+            .relleno1 {
+                display: none;
+            }
+            .relleno2 {
+                display: none;
+            }
+        }
+    }
+
 @media (max-width: 768px) {
+    /*MEDIA QUERIES DE LA PAGINA ACERCA DE NOSOTROS.HTML*/
     .nosotros-card {
         display: flex;
         flex-direction: column;
@@ -264,5 +280,83 @@
         img {
             width: 100% !important;
         }
+    }
+
+    /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
+    .texto {
+        font-size: 3.8em !important;
+        display: block !important;
+        opacity: 0.8 !important;
+    }
+
+
+    /*MEDIA QUERIES DE LA PAGINA ACERCADENOSOTROS.HTML*/
+    .cosanostra{
+        p{
+            font-size: 1em;
+        }
+    }
+    
+    /*MEDIA QUERIES DE TUTORIALES.HTML*/
+    .tutorialesmain{  
+        width: 91.3vmax;
+    }
+}
+
+
+@media (max-width: 550px) {
+    /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
+    .formarea {
+        width: 100%;
+        form {
+            max-width: 100vmax;
+            font-size: 100%;
+            textarea{
+                font-size: 100%;
+            }
+        }
+    }
+
+    /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
+    .texto {
+        font-size: 3.5em !important;
+    }
+}
+
+@media (max-width: 413px) {
+    /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
+    .formarea {
+        width: 41.8vmax;
+        form {
+            max-width: 100vmax;
+            font-size: 100%;
+            textarea{
+                font-size: 100%;
+            }
+        }
+    }
+
+    /*MEDIA QUERIES DE LA PAGINA OFERTAS.HTML*/
+    .unihogar{
+        max-width: 100vmax;
+        .header{
+            max-width: 100%, fit-content;
+        }
+    }
+
+    /*MEDIA QUERIES DE LA PAGINA ACERCADENOSOTROS.HTML*/
+    .cosanostra{
+        p{
+            font-size: 0.8em;
+        }
+    }
+    /*MEDIA QUERIES DE PRODUCTOS.HTML*/
+        .texto {
+            font-size: 3em !important;
+        }
+
+    /*MEDIA QUERIES DE TUTORIALES.HTML*/
+    .tutorialesmain{  
+        width: 45vmax;
     }
 }

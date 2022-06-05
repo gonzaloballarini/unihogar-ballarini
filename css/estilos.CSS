@@ -241,13 +241,13 @@ html {
 }
 
 @media (max-width: 1320px) {
-  .unihogar .main {
+  .main {
     max-width: 100%;
     padding: 0px;
     margin: 0px;
     border: 0px;
   }
-  .unihogar .main .ofermes {
+  .main .ofermes {
     max-width: 100vmax;
   }
   .card {
@@ -268,26 +268,29 @@ html {
   .unihogar .main .categorias {
     display: none;
   }
-  .footer-h1 {
+  .unihogar .social {
+    max-height: 10vh;
+  }
+  .unihogar .footer-h1 {
     display: none;
   }
-  .footer h3 {
+  .unihogar .footer h3 {
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
   }
-  .subfooter {
+  .unihogar .subfooter {
     display: flexbox;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .subfooter .iconosubfooter {
+  .unihogar .subfooter .iconosubfooter {
     width: 5%;
     height: 5%;
   }
-  .carousel-indicators li {
+  .unihogar .carousel-indicators li {
     height: 5px;
     background-color: #A28CBB;
     opacity: 1.5;
@@ -316,9 +319,6 @@ html {
 }
 
 @media (max-width: 413px) {
-  .unihogar {
-    max-width: 0vmax;
-  }
   .unihogar .header {
     max-width: 100%, -webkit-fit-content;
     max-width: 100%, -moz-fit-content;
@@ -657,26 +657,8 @@ html {
   grid-area: area52;
 }
 
-@media (max-width: 992px) {
-  .productgrid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .productgrid .grip {
-    height: 40%;
-  }
-  .productgrid .relleno1 {
-    display: none;
-  }
-  .productgrid .relleno2 {
-    display: none;
-  }
-}
-
 @media (max-width: 1320px) {
+  /*MEDIA QUERIES DE LA PAGINA ACERCA DE NOSOTROS.HTML*/
   .nosotros-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -695,9 +677,41 @@ html {
   .nosotros-card img {
     width: 100% !important;
   }
+  /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
+  .formarea {
+    width: 100%;
+  }
+  .formarea form {
+    max-width: 100vmax;
+    font-size: 150%;
+  }
+  .formarea form textarea {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
+  .productgrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .productgrid .grip {
+    height: 40%;
+  }
+  .productgrid .relleno1 {
+    display: none;
+  }
+  .productgrid .relleno2 {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+  /*MEDIA QUERIES DE LA PAGINA ACERCA DE NOSOTROS.HTML*/
   .nosotros-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -711,6 +725,73 @@ html {
   }
   .nosotros-card img {
     width: 100% !important;
+  }
+  /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
+  .texto {
+    font-size: 3.8em !important;
+    display: block !important;
+    opacity: 0.8 !important;
+  }
+  /*MEDIA QUERIES DE LA PAGINA ACERCADENOSOTROS.HTML*/
+  .cosanostra p {
+    font-size: 1em;
+  }
+  /*MEDIA QUERIES DE TUTORIALES.HTML*/
+  .tutorialesmain {
+    width: 91.3vmax;
+  }
+}
+
+@media (max-width: 550px) {
+  /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
+  .formarea {
+    width: 100%;
+  }
+  .formarea form {
+    max-width: 100vmax;
+    font-size: 100%;
+  }
+  .formarea form textarea {
+    font-size: 100%;
+  }
+  /*MEDIA QUERIE DE LA PAGINA PRODUCTOS.HTML*/
+  .texto {
+    font-size: 3.5em !important;
+  }
+}
+
+@media (max-width: 413px) {
+  /*MEDIA QUERIES DE LA PAGINA CONTACTO.HTML*/
+  .formarea {
+    width: 41.8vmax;
+  }
+  .formarea form {
+    max-width: 100vmax;
+    font-size: 100%;
+  }
+  .formarea form textarea {
+    font-size: 100%;
+  }
+  /*MEDIA QUERIES DE LA PAGINA OFERTAS.HTML*/
+  .unihogar {
+    max-width: 100vmax;
+  }
+  .unihogar .header {
+    max-width: 100%, -webkit-fit-content;
+    max-width: 100%, -moz-fit-content;
+    max-width: 100%, fit-content;
+  }
+  /*MEDIA QUERIES DE LA PAGINA ACERCADENOSOTROS.HTML*/
+  .cosanostra p {
+    font-size: 0.8em;
+  }
+  /*MEDIA QUERIES DE PRODUCTOS.HTML*/
+  .texto {
+    font-size: 3em !important;
+  }
+  /*MEDIA QUERIES DE TUTORIALES.HTML*/
+  .tutorialesmain {
+    width: 45vmax;
   }
 }
 

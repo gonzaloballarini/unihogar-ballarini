@@ -165,7 +165,6 @@
 }
 
 @media (max-width:1320px) {
-    .unihogar{
         .main{
             max-width:100%;
             padding: 0px;
@@ -175,7 +174,6 @@
                 max-width: 100vmax;
             }
         }
-    }
     
 
     .card{
@@ -190,36 +188,44 @@
     }
 }
 @media (max-width: 768px) {
-    .unihogar{
-        .main{
-            .categorias{
+    .unihogar {
+
+        .main {
+            .categorias {
                 display: none;
             }
-    }
-    }
-    
-
-    .footer-h1 {
-        display: none;
-    }
-    .footer h3 {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 36px;
-    }
-    .subfooter{
-        display:flexbox;
-        flex-direction: column;
-        .iconosubfooter{
-            width: 5%;
-            height: 5%;
         }
-    }
-    .carousel-indicators{
-        li{
-            height: 5px;
-            background-color: $colorlila;
-            opacity: 1.5;
+
+        .social {
+            max-height: 10vh;
+        }
+
+        .footer-h1 {
+            display: none;
+        }
+
+        .footer h3 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+
+        .subfooter {
+            display: flexbox;
+            flex-direction: column;
+
+            .iconosubfooter {
+                width: 5%;
+                height: 5%;
+            }
+        }
+
+        .carousel-indicators {
+            li {
+                height: 5px;
+                background-color: $colorlila;
+                opacity: 1.5;
+            }
         }
     }
 }
@@ -252,9 +258,7 @@
 }
 
 @media (max-width: 413px) {
-    
     .unihogar{
-        max-width: 0vmax;
         .header{
             max-width: 100%, fit-content;
         }
@@ -278,5 +282,7 @@
                 }
             }
         }
-}
+    }
+
+    
 }
