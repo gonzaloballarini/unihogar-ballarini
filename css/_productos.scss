@@ -11,15 +11,63 @@
 } 
 
 .card{
-    margin:15px; 
+    margin:10px; 
     background-color: $color1;
-    width: 400px;
+    width: 25em;
+    aspect-ratio: 1/1;
 }
 
-@media (max-width:1320px) {
-    
+@media (max-width:1290px) {
+    .card{
+        width: 35em;
+        height: 100%;
+        aspect-ratio: 2/1;
+    }
+}
+
+    @media (max-width: 1180px) {
+        .card{
+            width: 20em;
+            height: 100%;
+            aspect-ratio: 2/1;
+            margin: 5px;
+        }
+}
+
+@media (max-width: 990px) {
+    .card{
+        width: 25em;
+        height: 100%;
+        aspect-ratio: 2/1;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 820px) {
+    .card{
+        width: 50em;
+        height: 100%;
+        aspect-ratio: 3/1;
+        padding: 5px;
+        align-items: center;
+    }
     .carta{
-        width: 100%;
-        margin-left: -2%;
+        justify-content: space-around;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 450px) {
+    .produtto{
+        .card{
+            width: 27.5em;
+            max-width:100%;
+            height: 100%;
+            aspect-ratio: 3/1;
+            padding: 0px;
+        }
+        .card-text{
+            display: none;
+        }
     }
 }
