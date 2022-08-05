@@ -89,3 +89,7 @@ console.log (busqueda2)
 
 //No se porque motivos no funciona el alert y me larga undefined cuando el console log imprime bien los valores de busqueda. Será por el hecho de que muestra dos productos? Y no sabe cual mostrar??? 
 alert ("Su busqueda arrojo el/los siguiente/s producto/s  "+busqueda2.tipo+" por el precio de "+busqueda2.precio+" pesos")
+
+//Consola que muestra los precios sin IVA para el caso de querer mapear y actualizar los precios. 
+const preciosinIVA = totalproductos.map ((elemento)=> elemento.precio - elemento.precio*21/100)
+console.log (preciosinIVA)
