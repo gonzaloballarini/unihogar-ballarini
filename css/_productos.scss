@@ -15,6 +15,7 @@
     background-color: $color1;
     width: 25em;
     aspect-ratio: 1/1;
+        
 }
 
 @media (max-width:1290px) {
@@ -34,6 +35,10 @@
         }
 }
 
+.livingmain {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+}
 @media (max-width: 990px) {
     .card{
         width: 25em;
