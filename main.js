@@ -52,5 +52,17 @@ function modal (){
 
 */
 
+//Forma de guardar KEY + VALUE en el Local Storage - setItem.
+let rol = "Gonzalo"
+localStorage.setItem ("dia", "ocho de agosto")
+
+localStorage.setItem ("rol", rol)
+
+
+//Forma de extraer información del Local Storage - getItem.
+let guardarRol = localStorage.getItem ("rol")
+console.log (guardarRol)
+
+
 
 
