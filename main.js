@@ -4,7 +4,7 @@ let modal = document.getElementById ("modal");
 window.addEventListener('load', ()=> {
     modal.classList.add ("visibility:hidden");
 } )
-
+const compra = (id) => console.log (`hizo click en el producto con id: ${id}`)
 //Creacion de las cards de Productos
 
 const mostrarProductos = (stockliving) =>{
@@ -23,6 +23,7 @@ const mostrarProductos = (stockliving) =>{
                                 <a class="btn btn-primary" href="#${stockliving.id}" id=boton style= float:right>Comprar</a>
                                 </div>
             `;
+            div.onclick = () => compra (stockliving.id);
             contenedor.appendChild(div);   
         });
 }; 
@@ -37,6 +38,19 @@ function modalfunc (){
     prompt ("Usted está a punto de agregar al carrito el producto quiere continuar?"); 
 }
 
+/*
+dentro del div class el profe agrego una etique <a href> adentro le metió un <button class="open__modal">
+
+let btn = document.getelementsbyclassname ("open___modal");
+for (let i= 0; i<btn.length; i++){
+    btn [i].addEventListener ("click", modal);
+}
+
+function modal (){
+    console.log(this);
+}
+
+*/
 
 
 
