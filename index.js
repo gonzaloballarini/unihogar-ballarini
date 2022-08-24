@@ -53,50 +53,26 @@ console.log (ArrayBathroom)
 const totalproductos = ArrayDormitorio.concat(ArrayBathroom)
 console.log (totalproductos)
 
-//Funcion para incorporar objetos en un array.
-/* function busqueda (){
-    let categoriaIngresado = prompt("Ingrese la categoría del producto")
-    let tipoIngresado = prompt("Ingrese el tipo de producto que desea incorporar")
-    let precioIngresado = parseInt(prompt ("Ingrese el precio del mismo")) 
-    let productoIngresado = new Productos (
-        categoriaIngresado, tipoIngresado, precioIngresado
-    )
-    console.log (productoIngresado)
-    totalproductos.push(productoIngresado)
-} */
 
-/* busqueda ()
-console.log (totalproductos)
- */
+//Desestructurar. Por lo que entiendo del concepto  creo que puede llegar a servir, por ejemplo para actualizar el precio de un producto, sin necesidad de modificar todo el código ni cada objeto. 
+
+const {precio} = producto10
+console.log (precio)
+
+const [,,,,a,b,c,d,e] = ArrayBathroom
+console.log (a)
+console.log (b)
+console.log (c)
+console.log (d)
+console.log (e)
+
+
+//Spread de Array
+console.log (...totalproductos)
 
 //For of para recorrer un array y filtrar segun un parámetro. 
-/* for (let barato of totalproductos){
-    if (barato.precio < 2500){
-        console.log (barato)
-    }
-}
- */
+for (let barato of totalproductos){ barato.precio < 2500 ? console.log (barato) : "" }
 
-//Find para encontrar un producto. Futuro buscador del sitio.
-/* let search = prompt("Ingrese el producto de dormitorio que está buscando")
-const busqueda1 = ArrayDormitorio.find ((el)=> el.tipo == search)
-console.log(busqueda1)
-alert ("Su busqueda arrojo el siguiente producto  "+busqueda1.tipo+" por el precio de "+busqueda1.precio+" pesos")
- */
-
-//Filter para encontrar un producto. Futuro buscador del sitio. 
-/* let search2 = prompt ("Ingrese el producto de baño que está buscando")
-const busqueda2 = ArrayBathroom.filter ((el)=> el.tipo == search2)
-console.log (busqueda2)
- */
-
-//No se porque motivos no funciona el alert y me larga undefined cuando el console log imprime bien los valores de busqueda. Será por el hecho de que muestra dos productos? Y no sabe cual mostrar??? 
-/* alert ("Su busqueda arrojo el/los siguiente/s producto/s  "+busqueda2.tipo+" por el precio de "+busqueda2.precio+" pesos")
- */
-//Consola que muestra los precios sin IVA para el caso de querer mapear y actualizar los precios. 
-/* const preciosinIVA = totalproductos.map ((elemento)=> elemento.precio - elemento.precio*21/100)
-console.log (preciosinIVA)
- */
 
 //Probando el DOM 
 let lupaBuscadora = document.getElementById ("lupaBuscadora")
