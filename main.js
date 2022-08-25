@@ -4,7 +4,16 @@ let modal = document.getElementById ("modal");
 window.addEventListener('load', ()=> {
     modal.classList.add ("visibility:hidden");
 } )
-const compra = (id) => console.log (`hizo click en el producto con id: ${id}`)
+const compra = (id) => { 
+    console.log (`hizo click en el producto con id: ${id}`)
+    Swal.fire({
+        title: 'Añadido Exitosamente',
+        text: 'Su producto ya se encuentra añadido al carrito!',
+        icon: 'success',
+        confirmButtonText: 'Continuar'})  
+
+}
+
 //Creacion de las cards de Productos
 
 const mostrarProductos = (stockliving) =>{
@@ -30,27 +39,6 @@ const mostrarProductos = (stockliving) =>{
 
 mostrarProductos (stockliving)
 
-//Tengo el problema que solo funciona con el Id nro. 1 no con los demás...probé con un for each pero no me funcionó...
-let btn = document.getElementById ("boton");
-btn.addEventListener ("click", modalfunc)
-function modalfunc (){
-    console.log ("Respuesta al evento"), 
-    prompt ("Usted está a punto de agregar al carrito el producto quiere continuar?"); 
-}
-
-/*
-dentro del div class el profe agrego una etique <a href> adentro le metió un <button class="open__modal">
-
-let btn = document.getelementsbyclassname ("open___modal");
-for (let i= 0; i<btn.length; i++){
-    btn [i].addEventListener ("click", modal);
-}
-
-function modal (){
-    console.log(this);
-}
-
-*/
 
 //Forma de guardar KEY + VALUE en el Local Storage - setItem.
 let rol = "Gonzalo"

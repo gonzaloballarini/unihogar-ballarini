@@ -86,4 +86,9 @@ let cards = document.getElementById ("cardProducto")
 console.log (cards)
 
 
-//
+//Alert de Prueba
+/* Swal.fire({
+title: 'Error!',
+text: 'Do you want to continue?',
+icon: 'error',
+confirmButtonText: 'Cool'}) */
