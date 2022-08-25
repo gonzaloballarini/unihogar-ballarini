@@ -14,6 +14,14 @@ const compra = (id) => {
 
 }
 
+Toastify({
+
+    text: "Usted está en el Sector Living",
+    
+    duration: 3000
+    
+    }).showToast();
+
 //Creacion de las cards de Productos
 
 const mostrarProductos = (stockliving) =>{
