@@ -11,7 +11,6 @@ const compra = (id) => {
         text: 'Su producto ya se encuentra añadido al carrito!',
         icon: 'success',
         confirmButtonText: 'Continuar'})  
-
 }
 
 Toastify({

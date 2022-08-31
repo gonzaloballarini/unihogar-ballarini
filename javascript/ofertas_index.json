@@ -1,0 +1,40 @@
+[
+    {
+        "id": "O01", 
+        "nombre": "Frazada Microfibra Lisa",
+        "sector": "Dormitorio", 
+        "categoria": "Frazadas",
+        "descripcion": "Un sillon ideal para completar tu juego de living" , 
+        "marca": "Lantermo",
+        "size": "1 1/2 Plazas", 
+        "precio": 5147.34, 
+        "img": "../pages/sectoresproductos/producto12poltrona.jpg",
+        "cantidad": 9
+    }, 
+
+    {
+        "id": "O02", 
+        "nombre": "Frazada Microfibra Lisa",
+        "sector": "Dormitorio", 
+        "categoria": "Frazadas",
+        "descripcion": "Un sillon ideal para completar tu juego de living" , 
+        "marca": "Lantermo",
+        "size": "1 1/2 Plazas", 
+        "precio": 5147.34, 
+        "img": "../pages/sectoresproductos/producto12poltrona.jpg",
+        "cantidad":6
+    }, 
+
+    {
+        "id": "O03", 
+        "nombre": "Frazada Microfibra Lisa",
+        "sector": "Dormitorio", 
+        "categoria": "Frazadas",
+        "descripcion": "Un sillon ideal para completar tu juego de living" , 
+        "marca": "Lantermo",
+        "size": "1 1/2 Plazas", 
+        "precio": 5147.34, 
+        "img": "../pages/sectoresproductos/producto12poltrona.jpg",
+        "cantidad":6
+    }
+]
