@@ -338,14 +338,7 @@ const stockdormitorio = [
     }, 
 ]
 
-const compra = (id) => { 
-    console.log (`hizo click en el producto con id: ${id}`)
-    Swal.fire({
-        title: 'Añadido Exitosamente',
-        text: 'Su producto ya se encuentra añadido al carrito!',
-        icon: 'success',
-        confirmButtonText: 'Continuar'})  
-}
+
 
 //Creacion de las cards de Productos
 const mostrarProductos = (stockdormitorio) =>{
@@ -364,15 +357,24 @@ const mostrarProductos = (stockdormitorio) =>{
                                 </div>
             `;
             div.onclick = () => compra (stockdormitorio.id);
-            contenedor.appendChild(div);   
+            
+            contenedor.appendChild(div);
         });
 }; 
 
 mostrarProductos (stockdormitorio)
 
+let carrito = []
 
-fetch ('https://api.mercadopago.com')
-.then ((resp) => resp.json())
-.then ((data) => {
-    console.log (data)
-})
+const compra = (id) => { 
+    console.log (`hizo click en el producto con id: ${id}`)
+    Swal.fire({
+        title: 'Añadido Exitosamente',
+        text: 'Su producto ya se encuentra añadido al carrito!',
+        icon: 'success',
+        confirmButtonText: 'Continuar'}) 
+    carrito.push (id)
+    console.log (carrito)
+} 
+
+

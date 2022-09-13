@@ -1,4 +1,6 @@
 import { stockliving } from "./stock.js"
+
+
 let modalIsOpen = false;
 let modal = document.getElementById ("modal");
 window.addEventListener('load', ()=> {
