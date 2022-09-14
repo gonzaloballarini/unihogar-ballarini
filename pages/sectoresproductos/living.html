@@ -26,6 +26,8 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <title>Unihogar_Seccion-Living</title>
   <link rel="shortcut icon" href="../../images/iconoempresa.png">
+
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
@@ -33,8 +35,6 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <!-- Sweet Alert 2 -->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- Toastify -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="../../css/estilos.css">
 </head>
 
@@ -84,20 +84,21 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
               style="color:white; border: solid 2px white">Buscar</button>
           </form>
-          <button type="button" class="btn btn-primary carrito"></button>
+          <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+          </button>
         </div>
       </nav>
 
       <!--Imagen del Banner-->
-      <div class="banner-img">
-        <img src="../../images/home-2609600_1280.jpg" alt="empresalogo" class="bannerimagen" style="object-fit:cover">
+      <div class="banner">
+        <img src="../../../images/home-2609600_1280.jpg" alt="empresalogo" class="bannerimagen" style="object-fit:cover">
       </div>
     </div>
 
     <!--Cuerpo del Index-->
-    <main class="livingmain" id="livingContenedor">
-      <div id="modal"></div>  
-    </main>
+    <main class="produtto" id="contenedor-productos"></main>
+
+    
 
     <!--Codigo del Footer _ Ver referencias y comentarios del Código en el Index.html-->
     <div class="footer">
@@ -190,8 +191,20 @@
         style="margin-top: 8px; opacity: 0.6;"></a>
   </div>
 
-  <script src="../../stock.js" type="module"></script>
-  <script src="../../main.js" type="module"></script>
+  <!--Ventana del carrito que muestra las cosas agregadas-->
+  <div class="modal-contenedor">
+    <div class="modal-carrito">
+      <h5>Carrito</h5>
+      <button id="carritoCerrar"> <i class="fas fa-times-circle"></i></button>
+      <div id= "carrito-contenedor"></div>
+      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+      <button id="vaciar-carrito" class="boton-agregar">Vaciar Carrito</button>
+      <button id="finalizar-carrito" class="boton-finalizar">Finalizar Compra</button>
+    </div>
+  </div>
+  
+  <script src="../../javascript/s_01_bathroom.js" type="module"></script>
+  <script src="../../javascript/modal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -201,7 +214,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
     integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>  
 </body>
 
 </html>

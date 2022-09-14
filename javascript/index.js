@@ -4,7 +4,6 @@ function Productos (categoria, tipo, precio){
     this.precio = precio
 }
 
-
 const producto1 = new Productos ("Dormitorio", "Sabana King", 17800)
 const producto2 = new Productos ("Dormitorio", "Acolchado", 27800)
 const producto3 = new Productos ("Dormitorio", "Cover", 22500)
