@@ -50,15 +50,7 @@ const agregarAlCarrito = (prodId) => {
 actualizarCarrito ();
 }
 
-//Funcion para vaciar el carrito de todos los productos. 
-//Agregué un evento que borre el local storage para que al recargar la página no siga trayendo el carrito anterior que no queríamos y por eso vaciamos. 
-//Podría verse la opción de que exista un alert que prevenga la situación de borrar todo el carro y perder los datos para siempre. 
-const botonVaciar = document.getElementById ('vaciar-carrito')
-botonVaciar.addEventListener ( 'click', () => {
-    carrito.length = 0
-    localStorage.removeItem("carrito")
-    actualizarCarrito ()
-})
+
 
 const contadorCarrito = document.getElementById ('contadorCarrito')
 const precioTotal = document.getElementById ('precioTotal')
@@ -97,21 +89,53 @@ const actualizarCarrito = () => {
             <p>${prod.nombre}</p>
             <p>Precio:$ ${prod.precio} </p>
             <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-            <button.onclick = "eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-        `
+            <button id="eliminardc${prod.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i>
+            </button>`;
         contenedorCarrito.appendChild (div)
+        
+
+        const botonchau = document.getElementById (`eliminardc${prod.id}`)
+            botonchau.addEventListener ('click', ()=> {
+            eliminarDelCarrito(prod.id)
+                Swal.fire({
+                    title: 'Producto Eliminado',
+                    text: 'Su producto ya no se encuentra en el carrito!',
+                    icon: 'warning',
+                    confirmButtonText: 'Continuar'}) 
+        return botonchau})
         localStorage.setItem ('carrito', JSON.stringify(carrito))
-    })
-    contadorCarrito.innerText = carrito.length
-    precioTotal.innerText = carrito.reduce ((acc, prod) => acc + prod.precio*prod.cantidad, 0)
-}
+        
+} ,
+        contadorCarrito.innerText = carrito.length,
+        precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio*prod.cantidad, 0),
+
+)}
+
+//Funcion para vaciar el carrito de todos los productos. 
+const botonVaciar = document.getElementById ('vaciar-carrito')
+
+botonVaciar.addEventListener ( 'click', () => {
+    carrito.length = 0
+    localStorage.removeItem("carrito")
+    actualizarCarrito ()
+})
 
 
-//Hay que solucionar el eliminar producto del carrito que no funciona porque nadie lo llama. 
+const fincompra = document.getElementById ('finalizar-carrito')
 
-//Hay un problema cuando suma los productos me pone como 10 decimales, probé con .toFixed() y no me anduvo. No es en todas las sumas, pero por ejemplo si agrego los 12 productos de una sección, me da con un chorizo de decimales. 
+fincompra.addEventListener ('click', ()=> {
+    const totalAlert = JSON.stringify (precioTotal)
+    Swal.fire({
+        title: 'Finalizar Carrito',
+        text:  'Usted ha realidado una compra por la suma de $',
+        icon: 'success',
+        confirmButtonText: 'Ir a Pagar'}) 
 
-//Me toma las cards de cada una de las secciones o paginas.html como si fuera la misma card. Es decir que por ejemplo la card. Nro. 1  de todos los html, me la toma como card.Nro.1 en todos por igual. Es decir que, si selecciono la primera card de todos los html, me agrega al carro 1 solo producto y me lo agrega 7 veces (que es la cantidad de secciones). Para solucionar ya le puse un id distinto a cada objeto de array de cada seccion. Probé cambiando los id tanto del contenedor-productos, como del contenedor-carrito y tampoco....
+}  )
+
+/*Hay un problema menor en el carrito: 
+/ cuando suma los productos me pone como 10 decimales, probé con .toFixed() y no me anduvo. 
+No es en todas las sumas, pero por ejemplo si agrego los 12 productos de una sección, me arroja como 10 decimales.*/
 
 //Hay que agregar una función que cuando finaliza el carrito, actualiza el valor del item "producto.stock" que figura en la card. Es decir que disminuya la cantidad de productos disponibles en cada una de las cards elegidas. O bien se puede hacer que al momento de cargar en el carrito, inmediatamente se descuente un nro del stock.  
 

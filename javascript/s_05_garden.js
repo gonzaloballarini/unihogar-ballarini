@@ -97,16 +97,35 @@ const actualizarCarrito = () => {
             <p>${prod.nombre}</p>
             <p>Precio:$ ${prod.precio} </p>
             <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-            <button.onclick = "eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-        `
+            <button id="eliminardc${prod.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i>
+            </button>`;
         contenedorCarrito.appendChild (div)
+        
+
+        const botonchau = document.getElementById (`eliminardc${prod.id}`)
+            botonchau.addEventListener ('click', ()=> {
+            eliminarDelCarrito(prod.id)
+                Swal.fire({
+                    title: 'Producto Eliminado',
+                    text: 'Su producto ya no se encuentra en el carrito!',
+                    icon: 'warning',
+                    confirmButtonText: 'Continuar'}) 
+        return botonchau})
         localStorage.setItem ('carrito', JSON.stringify(carrito))
-    })
-    contadorCarrito.innerText = carrito.length
-    precioTotal.innerText = carrito.reduce ((acc, prod) => acc + prod.precio*prod.cantidad, 0)
-}
+        
+} ,
+        contadorCarrito.innerText = carrito.length,
+        precioTotal.innerText = carrito.reduce ((acc, prod) => acc + prod.precio*prod.cantidad, 0)
+)}
 
+const fincompra = document.getElementById ('finalizar-carrito')
 
-//Hay que solucionar el eliminar producto del carrito que no funciona porque nadie lo llama. 
+fincompra.addEventListener ('click', ()=> {
+    const totalAlert = JSON.stringify (precioTotal)
+    Swal.fire({
+        title: 'Finalizar Carrito',
+        text:  'Usted ha realidado una compra por la suma de $',
+        icon: 'success',
+        confirmButtonText: 'Ir a Pagar'}) 
 
-//Hay que agregar que cuando finaliza el carrito, el producto.stock disminuya la cantidad de productos disponibles en cada una de las cards elegidas. O bien se puede hacer que al momento de cargar en el carrito ya se vea afectado el stock. 
+}  )

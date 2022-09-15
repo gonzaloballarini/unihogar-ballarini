@@ -1,4 +1,4 @@
-fetch ("./javascript/ofertas_index.json")
+fetch ("./javascript/stock_00_index.json")
 .then (response => response.json())
 .then (data => {
     console.log (data)
@@ -19,7 +19,10 @@ fetch ("./javascript/ofertas_index.json")
             `;
             div.onclick = () => compra (data.id);
             contenedor.appendChild(div);   
+    
+    
         });
+    
     }
     mostrarProductos (data)
     return mostrarProductos
@@ -33,5 +36,6 @@ const compra = (id) => {
         icon: 'success',
         confirmButtonText: 'Continuar'})  
 }
+
 
 
