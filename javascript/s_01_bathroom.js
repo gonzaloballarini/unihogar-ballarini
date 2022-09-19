@@ -63,8 +63,6 @@ document.addEventListener ('DOMContentLoaded', () => {
     }
 })
 
-
-
 //Funcion para eliminar productos del carrito. 
 //Esta no funciona porque no la llama el innerHtml de la Funcion Modal. Vaya a saber que demonios ocurre, por eso no esta brillante, porque nadie la llama. 
 
@@ -107,8 +105,8 @@ const actualizarCarrito = () => {
         
 } ,
         contadorCarrito.innerText = carrito.length,
-        precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio*prod.cantidad, 0),
-
+        precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio*prod.cantidad, 0), 
+        
 )}
 
 //Funcion para vaciar el carrito de todos los productos. 
@@ -124,7 +122,6 @@ botonVaciar.addEventListener ( 'click', () => {
 const fincompra = document.getElementById ('finalizar-carrito')
 
 fincompra.addEventListener ('click', ()=> {
-    const totalAlert = JSON.stringify (precioTotal)
     Swal.fire({
         title: 'Finalizar Carrito',
         text:  'Usted ha realidado una compra por la suma de $',

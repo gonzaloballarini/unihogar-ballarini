@@ -72,6 +72,16 @@
                     border-radius: 15%;
                 }
             }
+            .ofermes{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                justify-content: space-between;
+                padding: 10px;
+
+            }
             .ofermes-h1{
                 background-image: url(../images/low-poly-grid-haikei.svg);
                 background-size: contain;
@@ -93,6 +103,7 @@
                 box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
                 border: none;
                 border-radius: 0;
+                object-fit:cover; 
             }
             .card-text{
                 text-align: justify;
