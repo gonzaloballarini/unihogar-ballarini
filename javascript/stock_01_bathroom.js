@@ -64,7 +64,7 @@ const stock_bathroom = [
         marca: "Lantermo",
         size: "1 1/2 Plazas", 
         precio: 2200, 
-        img: "../images/productos/producto02ganchitos.jpg",
+        img: "../../images/productos/producto02ganchitos.jpg",
         cantidad: 1,
         stock: 12, 
     }, 
