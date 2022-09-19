@@ -10,7 +10,7 @@ stock_bathroom.forEach( (producto) => {
                                 <span class= "card-title">${producto.nombre}</span><br>         </div>
                                 <div>
                                 <p>${producto.descripcion}</p>
-                                <p>${producto.precio}</p>
+                                <p>Precio: $${producto.precio}</p>
                                 <p id="stock">Productos disponibles: ${producto.stock} </p>
                                 <button id="agregar${producto.id}" class="boton-agregar">Comprar <i class= "fas fa-shopping-cart"></i></button>
                                 </div>`;
@@ -64,8 +64,6 @@ document.addEventListener ('DOMContentLoaded', () => {
 })
 
 //Funcion para eliminar productos del carrito. 
-//Esta no funciona porque no la llama el innerHtml de la Funcion Modal. Vaya a saber que demonios ocurre, por eso no esta brillante, porque nadie la llama. 
-
 const eliminarDelCarrito = (prodId) => { 
     const item = carrito.find((prod) => prod.id === prodId)
     const indice = carrito.indexOf (item)
@@ -124,17 +122,9 @@ const fincompra = document.getElementById ('finalizar-carrito')
 fincompra.addEventListener ('click', ()=> {
     Swal.fire({
         title: 'Finalizar Carrito',
-        text:  'Usted ha realidado una compra por la suma de $',
+        text:  'Usted será dirigido a la sección de Pagos',
         icon: 'success',
         confirmButtonText: 'Ir a Pagar'}) 
-
-}  )
-
-/*Hay un problema menor en el carrito: 
-/ cuando suma los productos me pone como 10 decimales, probé con .toFixed() y no me anduvo. 
-No es en todas las sumas, pero por ejemplo si agrego los 12 productos de una sección, me arroja como 10 decimales.*/
-
-//Hay que agregar una función que cuando finaliza el carrito, actualiza el valor del item "producto.stock" que figura en la card. Es decir que disminuya la cantidad de productos disponibles en cada una de las cards elegidas. O bien se puede hacer que al momento de cargar en el carrito, inmediatamente se descuente un nro del stock.  
-
+})
 
 

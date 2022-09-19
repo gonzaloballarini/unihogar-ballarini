@@ -124,7 +124,7 @@ fincompra.addEventListener ('click', ()=> {
     const totalAlert = JSON.stringify (precioTotal)
     Swal.fire({
         title: 'Finalizar Carrito',
-        text:  'Usted ha realidado una compra por la suma de $',
+        text:  'Usted será dirigido a la sección de Pagos',
         icon: 'success',
         confirmButtonText: 'Ir a Pagar'}) 
 

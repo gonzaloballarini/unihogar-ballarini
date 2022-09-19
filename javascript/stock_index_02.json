@@ -8,7 +8,7 @@
         "marca": "Lantermo",
         "size": "1 1/2 Plazas", 
         "precio": 5147.34, 
-        "img": "../pages/sectoresproductos/producto12poltrona.jpg",
+        "img": "../../../images/productos/producto11sillon.jpg",
         "cantidad": 1,
         "stock": 12
     }, 
@@ -22,7 +22,7 @@
         "marca": "Lantermo",
         "size": "1 1/2 Plazas", 
         "precio": 5147.34, 
-        "img": "../pages/sectoresproductos/producto12poltrona.jpg",
+        "img": "../../../images/productos/producto11sillon.jpg",
         "cantidad":1,
         "stock": 12
     }, 
@@ -36,7 +36,7 @@
         "marca": "Lantermo",
         "size": "1 1/2 Plazas", 
         "precio": 5147.34, 
-        "img": "../pages/sectoresproductos/producto12poltrona.jpg",
+        "img": "../../../images/productos/producto11sillon.jpg",
         "cantidad":1,
         "stock": 12
     },
@@ -49,7 +49,7 @@
         "marca": "Lantermo",
         "size": "1 1/2 Plazas", 
         "precio": 5147.34, 
-        "img": "../pages/sectoresproductos/producto12poltrona.jpg",
+        "img": "../../../images/productos/producto11sillon.jpg",
         "cantidad": 1,
         "stock": 12
     }

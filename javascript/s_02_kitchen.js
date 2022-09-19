@@ -10,7 +10,7 @@ stock_kitchen.forEach( (producto) => {
                                 <span class= "card-title">${producto.nombre}</span><br>         </div>
                                 <div>
                                 <p>${producto.descripcion}</p>
-                                <p>${producto.precio}</p>
+                                <p>Precio: $${producto.precio}</p>
                                 <p id="stock">Productos disponibles: ${producto.stock} </p>
                                 <button id="agregar${producto.id}" class="boton-agregar">Comprar <i class= "fas fa-shopping-cart"></i></button>
                                 </div>`;
@@ -52,7 +52,7 @@ actualizarCarrito ();
 
 //Funcion para vaciar el carrito de todos los productos. 
 //Agregué un evento que borre el local storage para que al recargar la página no siga trayendo el carrito anterior que no queríamos y por eso vaciamos. 
-//Podría verse la opción de que exista un alert que prevenga la situación de borrar todo el carro y perder los datos para siempre. 
+
 const botonVaciar = document.getElementById ('vaciar-carrito')
 botonVaciar.addEventListener ( 'click', () => {
     carrito.length = 0
@@ -72,15 +72,12 @@ document.addEventListener ('DOMContentLoaded', () => {
 })
 
 //Funcion para eliminar productos del carrito. 
-//Esta no funciona porque no la llama el innerHtml de la Funcion Modal. Vaya a saber que demonios ocurre, por eso no esta brillante, porque nadie la llama. 
-
 const eliminarDelCarrito = (prodId) => { 
     const item = carrito.find((prod) => prod.id === prodId)
     const indice = carrito.indexOf (item)
     carrito.splice(indice, 1) 
     actualizarCarrito ()
 }
-
 
 //Funcion para que se agreguen los productos al carrito, es decir para que tome el array carrito y lo muestre en una ventana//
 const contenedorCarrito = document.getElementById ('carrito-contenedor')
@@ -122,7 +119,7 @@ fincompra.addEventListener ('click', ()=> {
     const totalAlert = JSON.stringify (precioTotal)
     Swal.fire({
         title: 'Finalizar Carrito',
-        text:  'Usted ha realidado una compra por la suma de $',
+        text:  'Usted será dirigido a la sección de Pagos',
         icon: 'success',
         confirmButtonText: 'Ir a Pagar'}) 
 
