@@ -16,6 +16,12 @@
         
 }
 
+.card img {
+    width: 50px;
+    height: 300px;
+    object-fit: cover;
+}
+
 #boton-carrito {
     border: none;
     color: royalblue;

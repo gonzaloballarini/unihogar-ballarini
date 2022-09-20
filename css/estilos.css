@@ -104,7 +104,9 @@ html {
 }
 .unihogar .main .card img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .unihogar .main .card {
   margin: 0 0.5em;
@@ -629,6 +631,13 @@ html {
   margin: 10px;
   width: 25em;
   aspect-ratio: 1/1;
+}
+
+.card img {
+  width: 50px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #boton-carrito {

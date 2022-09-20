@@ -10,7 +10,7 @@ stock_laundry.forEach( (producto) => {
                                 <span class= "card-title">${producto.nombre}</span><br>         </div>
                                 <div>
                                 <p>${producto.descripcion}</p>
-                                <p>${producto.precio}</p>
+                                <p>Precio: $${producto.precio}</p>
                                 <p id="stock">Productos disponibles: ${producto.stock} </p>
                                 <button id="agregar${producto.id}" class="boton-agregar">Comprar <i class= "fas fa-shopping-cart"></i></button>
                                 </div>`;
